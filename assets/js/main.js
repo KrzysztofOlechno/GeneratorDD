@@ -146,3 +146,16 @@ function myfunction()
 }
 console.log("po:", this.name);
 }
+
+// ikonki
+
+var iconx = document.getElementsByClassName("icon");
+console.log("tekst",iconx);
+for(var i=0;i<iconx.length;i++){
+	console.log(i," : ",iconx[i]);
+	iconx[i].addEventListener("click", funkcjas);
+}
+
+function funkcjas()
+{var link = "";
+iconx.classList.add("szymon");}
