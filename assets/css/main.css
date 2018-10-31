@@ -1462,7 +1462,7 @@
 			}
 
 		}
-/*Tooltips*/
+/* Wyświetlanie tooltipów*/
 		.tooltip {
 			position: relative;
 			display: inline-block;
@@ -1510,7 +1510,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
