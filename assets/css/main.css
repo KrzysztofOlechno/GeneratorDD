@@ -1624,19 +1624,19 @@ background-color:rgba(37, 30, 48, 0.74);
     display: none;
     background-color: #000000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	width: 27%;
+	width: 27.5%;
 	position: absolute;
 }
 
-.dropdown-content a {
-    color: black;
+.dropdown-content div {
+    color: rgb(255, 255, 255);
     text-decoration: none;
 	display: block;
-	padding: 16px;
+	
 	
 }
 
-.dropdown-content a:hover {background-color: #000000; color: black;}
+.dropdown-content div:hover {background-color: #ffffff; color: black;}
 						
 
 .dropdown:hover .dropdown-content {
