@@ -157,5 +157,4 @@ for(var i=0;i<iconx.length;i++){
 }
 
 function funkcjas()
-{var link = "";
-iconx.classList.add("szymon");}
+{ this.href = "https://www.wp.pl/";}
