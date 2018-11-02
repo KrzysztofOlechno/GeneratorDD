@@ -1546,16 +1546,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
     to {top:0; opacity:1}
 }
 
-/* The Close Button */
-.close {
+/* Krzyżyk zamykania pop-up */
+.ClosePop {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.ClosePop:hover,
+.ClosePop:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -1576,11 +1576,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 
-#rasa .modal-header {
+#Race .modal-header {
 background-color:rgba(37, 30, 48, 0.74);
 }
 
-#rasa .modal-footer {
+#Race .modal-footer {
 	background-color:rgba(37, 30, 48, 0.74);
 	}
 
@@ -1624,7 +1624,7 @@ background-color:rgba(37, 30, 48, 0.74);
     display: none;
     background-color: #000000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	width: 27.5%;
+	width: 27.3%;
 	position: absolute;
 }
 

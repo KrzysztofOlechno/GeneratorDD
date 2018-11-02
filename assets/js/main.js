@@ -115,31 +115,32 @@
 
 
 
-// popsiki i inne
+// Pop-up
 
-var btns = document.getElementsByClassName("pop");
-for(var i=0;i<btns.length;i++){
-console.log("przed:", i);
-btns[i].addEventListener('click', myfunction);
+var DropBtn = document.getElementsByClassName("Popup");
+for(var i=0;i<DropBtn.length;i++){
+DropBtn[i].addEventListener('click', PopupHid);
 }
 
-function myfunction()
+function PopupHid()
 {
-	var nazwa = this.name;
-	var modal = document.getElementById(nazwa);
-	modal.style.display = "block";
+	var NameOfButton = this.name;
+	var PopupSpace = document.getElementById(NameOfButton);
+	PopupSpace.style.display = "block";
 
-	var span = document.getElementById("Accept" + nazwa);
-	span.onclick = function() {
-	modal.style.display = "none";
+	var PopClose1 = document.getElementById("Accept" + NameOfButton);
+	PopClose1.onclick = function() {
+	PopupSpace.style.display = "none";
+	}
+	var PopClose2 = document.getElementById("ClosePop" + NameOfButton);
+	PopClose2.onclick = function() {
+	PopupSpace.style.display = "none";
+	}		
 }
 
-	
-}
 
 
-
-// ikonki
+// Ikony
 
 var iconx = document.getElementsByClassName("icon");
 console.log("tekst",iconx);
@@ -150,17 +151,18 @@ for(var i=0;i<iconx.length;i++){
 
 function funkcjas()
 { this.href = "https://www.wp.pl/";}
-// wybór ras
 
-var RaceList = document.getElementsByClassName("race")
+// Wybór rasy
+
+var RaceList = document.getElementsByClassName("RaceChoose")
 for(var i=0;i<RaceList.length;i++){
 	 console.log(i," : ",RaceList[i].innerHTML)
 	 RaceList[i].addEventListener("click", DropDownUse)	
 }
 
 function DropDownUse(){
-	var DropDownRace1 = document.getElementById("dropik");
-	var DropDownRace2 = document.getElementById("Race");
+	var DropDownRace1 = document.getElementById("DropRaceDown");
+	var DropDownRace2 = document.getElementById("RaceName");
 	var RacePick = this.innerHTML;
 	DropDownRace1.innerHTML = RacePick;
 	DropDownRace2.innerHTML = RacePick;

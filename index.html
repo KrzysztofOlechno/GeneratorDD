@@ -44,20 +44,20 @@
 						<div class="inner">
 							<h3>Wybierz rasę</h3>
 							<p>Wybór rasy w znaczący sposób wpływa na cechy postaci.</p>
-							<input type="button" class="button style1 fit pop" name="rasa" value="Wybierz">
+							<input type="button" class="button style1 fit Popup" name="Race" value="Wybierz">
 								<div class="tooltip">
 									<input type="text" class="button fit" value="Rasa" readonly>
 									<span class="tooltiptext">Opis klasy</span>
 								
 <!-- Rasa - Pop-up -->
 
-									<div id="rasa" class="modal">
+									<div id="Race" class="modal">
 										<div class="modal-content">
 
 <!-- Rasa - Pop-up - Nagłówek -->
 
 											<div class="modal-header">
-												<span class="close">&times;</span>
+												<span id="ClosePopRace" class="ClosePop">&times;</span>
 												<h2>Rasa</h2>
 											</div>
 
@@ -71,25 +71,25 @@
 <!-- Rasa - Pop-up - Dropdown -->
 
 																<div class="dropdown">
-																	<button class="dropbtn" id="dropik" >Dropdown</button>
+																	<button class="dropbtn" id="DropRaceDown" >Dropdown</button>
 																	<div class="dropdown-content">
-																	  	<div class="race">Człowiek</div>				
-																	  	<div class="race">Krasnolud</div>		
-																	  	<div class="race">Gnom</div>			
-																	  	<div class="race">Ork</div>			
-																	  	<div class="race">Niziołek</div>	
-																	  	<div class="race">Planokrwisty</div>
-																	  	<div class="race">Półelf</div>			
-																	  	<div class="race">Półork</div>																  
-																	  	<div class="race">Pomniejsze rasy</div>
-																	  	<div class="race">Likantropy</div>		
+																	  	<div class="RaceChoose">Człowiek</div>				
+																	  	<div class="RaceChoose">Krasnolud</div>		
+																	  	<div class="RaceChoose">Gnom</div>			
+																	  	<div class="RaceChoose">Ork</div>			
+																	  	<div class="RaceChoose">Niziołek</div>	
+																	  	<div class="RaceChoose">Planokrwisty</div>
+																	  	<div class="RaceChoose">Półelf</div>			
+																	  	<div class="RaceChoose">Półork</div>																  
+																	  	<div class="RaceChoose">Pomniejsze rasy</div>
+																	  	<div class="RaceChoose">Likantropy</div>		
 																	</div>
 																</div>
 															</td>
 
 <!-- Rasa - Pop-up - Nazwa -->
 
-															<td colspan=2 id="Race">RASA</td>
+															<td colspan=2 id="RaceName">RASA</td>
 														</tr>
 														<tr>
 
@@ -111,7 +111,7 @@
 <!-- Rasa - Pop-up - Stopka -->
 
 												<div class="modal-footer">
-													<input type="button" class="style1" name="AcceptRace" id="Acceptrasa" value="Zatwierdź">
+													<input type="button" class="style1" name="AcceptRace" id="AcceptRace" value="Zatwierdź">
 												</div>
 											</div>
 										</div>
@@ -126,7 +126,7 @@
 								<div class="inner">
 									<h3>Wybierz klasę</h3>
 									<p>Wybór klasy w znaczący sposób wpływa na cechy postaci.</p>
-									<input type="button" class="button style2 fit pop" name="klasa" value="Wybierz">
+									<input type="button" class="button style2 fit Popup" name="klasa" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Klasa"  readonly>
 										<span class="tooltiptext">Opis rasy</span>
@@ -139,7 +139,7 @@
 <!-- Klasa - Pop-up - Nagłówek -->
 
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Klasa</h2>
 												</div>
 
@@ -210,7 +210,7 @@
 								<div class="inner">
 									<h3>Atrybuty</h3>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style3 fit pop" name="atryb" value="Wybierz">
+									<input type="button" class="button style3 fit Popup" name="atryb" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Atrybuty" readonly>
 										<span class="tooltiptext">Atrybuty</span>
@@ -219,7 +219,7 @@
 										<div id="atryb" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Atrybuty</h2>
 												</div>
 												<div class="modal-body">
@@ -243,7 +243,7 @@
 									<h3>Umiejętności</h3>
 									<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" name="umie" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" name="umie" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -252,7 +252,7 @@
 										<div id="umie" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -276,7 +276,7 @@
 									<h3>Atuty</h3>
 									<p>Wybór atutów w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" name="atuty" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" name="atuty" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Atuty</span>
@@ -285,7 +285,7 @@
 										<div id="atuty" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -310,7 +310,7 @@
 									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 									<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -319,7 +319,7 @@
 										<div id="myModal" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -344,7 +344,7 @@
 									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 									<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -353,7 +353,7 @@
 										<div id="myModal" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -376,7 +376,7 @@
 							<div class="inner">
 								<h3>Nascetur nunc varius commodo</h3>
 								<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -385,7 +385,7 @@
 										<div id="myModal" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -410,7 +410,7 @@
 								<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 								<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -419,7 +419,7 @@
 										<div id="myModal5" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>5555</h2>
 												</div>
 												<div class="modal-body">
