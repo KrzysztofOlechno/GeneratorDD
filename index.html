@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html>
+
+<!-- Sekcja nagłówkowa -->
+
 	<head>
 		<title>Dungeons and Dragons - Forgotten Realms</title>
 		<meta charset="utf-8" />
@@ -7,88 +10,117 @@
 		<link rel="shortcut icon" href="images/ddicon.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+
+<!-- Zawartość strony -->
+
 	<body id="top">
 
-			
-				<section id="banner">
-					<div class="inner">
-						<header>
-							<h1>Zaawansowany Generator Postaci do Dungeons and Dragons - Forgotten Realms</h1>
-							<p>Rozpocznij swoją przygodę, wkrocz do świata Zapomnianych krain jako wymarzona postać, <br />
-								którą nigdy nie będziesz w normalnym życiu, bo jest zwykłym nerdem i kliknij przycisk poniżej<br /></p>
-						</header>
-						<a href="#main" class="more"></a>
-					</div>
-				</section>
+<!-- Banner -->
 
-			<!-- Main -->
-				<div id="main">
-					<div class="inner">
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>Zaawansowany Generator Postaci do Dungeons and Dragons - Forgotten Realms</h1>
+					<p>Rozpocznij swoją przygodę, wkrocz do świata Zapomnianych krain jako wymarzona postać, <br />
+					   którą nigdy nie będziesz w normalnym życiu, bo jest zwykłym nerdem i kliknij przycisk poniżej<br /></p>
+				</header>
+					<a href="#main" class="more"></a>
+			</div>
+		</section>
 
-					<!-- Boxes -->
-						<div class="thumbnails">
-						<!-- RASA -->
-							<div class="box">
-								<a href="" class="image fit"><img src="images/pic01.jpeg" alt="" /></a>
-								<div class="inner">
-									<h3>Wybierz rasę</h3>
-									<p>Wybór rasy w znaczący sposób wpływa na cechy postaci.</p>
-									<input type="button" class="button style1 fit pop" name="rasa" value="Wybierz">
-									<div class="tooltip">
-										<input type="text" class="button fit" value="Rasa" readonly>
-										<span class="tooltiptext">Opis klasy</span>
+<!-- Główne menu -->
+
+		<div id="main">
+			<div class="inner">
+
+<!-- Pudełka -->
+
+				<div class="thumbnails">
+
+<!-- RASA - sekcja -->
+
+					<div class="box">
+						<a href="" class="image fit"><img src="images/pic01.jpeg" alt="" /></a>
+						<div class="inner">
+							<h3>Wybierz rasę</h3>
+							<p>Wybór rasy w znaczący sposób wpływa na cechy postaci.</p>
+							<input type="button" class="button style1 fit pop" name="rasa" value="Wybierz">
+								<div class="tooltip">
+									<input type="text" class="button fit" value="Rasa" readonly>
+									<span class="tooltiptext">Opis klasy</span>
 								
-										<!-- Popsik rasa-->
-										<div id="rasa" class="modal">
-											<div class="modal-content">
-												<div class="modal-header">
-													<span class="close">&times;</span>
-													<h2>Rasa</h2>
-												</div>
+<!-- Rasa - Pop-up -->
+
+									<div id="rasa" class="modal">
+										<div class="modal-content">
+
+<!-- Rasa - Pop-up - Nagłówek -->
+
+											<div class="modal-header">
+												<span class="close">&times;</span>
+												<h2>Rasa</h2>
+											</div>
+
+<!-- Rasa - Pop-up - Zawartość -->
+
 												<div class="modal-body">
 													<table style="width:100%">
 														<tr>
 															<td style="width:30%">
+
+<!-- Rasa - Pop-up - Dropdown -->
+
 																<div class="dropdown">
-																	<button class="dropbtn">Dropdown</button>
+																	<button class="dropbtn" id="dropik" >Dropdown</button>
 																	<div class="dropdown-content">
-																	  Człowiek<br>				
-																	  Krasnolud<br>		
-																	  Gnom<br>			
-																	  Ork<br>			
-																	  Niziołek<br>	
-																	  Planokrwisty<br>	
-																	  Półelf<br>			
-																	  Półork<br>																  
-																	  Pomniejsze rasy<br>
-																	  Likantropy		
+																	  	<div class="race">Człowiek</div>				
+																	  	<div class="race">Krasnolud</div>		
+																	  	<div class="race">Gnom</div>			
+																	  	<div class="race">Ork</div>			
+																	  	<div class="race">Niziołek</div>	
+																	  	<div class="race">Planokrwisty</div>
+																	  	<div class="race">Półelf</div>			
+																	  	<div class="race">Półork</div>																  
+																	  	<div class="race">Pomniejsze rasy</div>
+																	  	<div class="race">Likantropy</div>		
 																	</div>
-																  </div>
+																</div>
 															</td>
-															<td colspan=2>RASA</td>
+
+<!-- Rasa - Pop-up - Nazwa -->
+
+															<td colspan=2 id="Race">RASA</td>
 														</tr>
 														<tr>
+
+<!-- Rasa - Pop-up - Obrazek -->
+
 															<td><img src="images/pic01.jpeg" style="width:100%" alt="" /></td>
+
+<!-- Rasa - Pop-up - Opis -->
+
 															<td colspan=2>Opis</td>
 														</tr>
 														<tr>
 															<td >Statsy</td>
-															<td>Inne statsy</td>
-															
+															<td>Inne statsy</td>															
 														</tr>
-													</table>	
-													
-												
+													</table>																										
 												</div>
+
+<!-- Rasa - Pop-up - Stopka -->
+
 												<div class="modal-footer">
-													<input type="button" class="style1" name="" value="Zatwierdź">
+													<input type="button" class="style1" name="AcceptRace" id="Acceptrasa" value="Zatwierdź">
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						<!-- KLASA -->
+
+<!-- KLASA - sekcja -->
+						
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
 								<div class="inner">
@@ -99,26 +131,80 @@
 										<input type="text" class="button fit" value="Klasa"  readonly>
 										<span class="tooltiptext">Opis rasy</span>
 								
-										<!-- Popsik klasa-->
+<!-- Klasa - Pop-up -->
+
 										<div id="klasa" class="modal">
 											<div class="modal-content">
+
+<!-- Klasa - Pop-up - Nagłówek -->
+
 												<div class="modal-header">
 													<span class="close">&times;</span>
 													<h2>Klasa</h2>
 												</div>
+
+<!-- Klasa - Pop-up - Zawartość -->
+
 												<div class="modal-body">
-													<p>Some text in the Modal Body</p>
-													<p>Some other text...</p>
+													<table style="width:100%">
+														<tr>
+															<td style="width:30%">
+																
+<!-- Klasa - Pop-up - Dropdown -->																
+																
+																<div class="dropdown">
+																	<button class="dropbtn">Wybierz klasę</button>
+																	<div class="dropdown-content">
+																	  	<div>Barbarzyńca</div>			
+																	  	<div>Bard</div>
+																	  	<div>Czarodziej</div>			
+																	  	<div>Druid</div>		
+																	  	<div>Kapłan</div>
+																	  	<div>Łotrzyk</div>
+																	  	<div>Mnich</div>		
+																	  	<div>Paladyn</div>															  
+																	  	<div>Tropiciel</div>
+																	  	<div>Wojownik</div>
+																	  	<div>Zaklinacz</div>		
+																	</div>
+																</div>
+															</td>
+
+<!-- Klasa - Pop-up - Nazwa -->
+
+															<td colspan=2>KLASA</td>
+														</tr>
+														<tr>
+
+<!-- Klasa - Pop-up - Obrazek -->
+
+															<td><img src="images/warrior.jpg" style="width:100%" alt="" /></td>
+															
+<!-- Klasa - Pop-up - Opis -->
+															
+															<td colspan=2>Opis</td>
+														</tr>
+														<tr>
+															<td >Statsy</td>
+															<td>Inne statsy</td>
+															
+														</tr>
+													</table>	
+													
+<!-- Klasa - Pop-up - Stopka -->												
+
 												</div>
 												<div class="modal-footer">
-													<h3>Zatwierdź</h3>
+													<input type="button" class="style1" name="" id="Acceptklasa" value="Zatwierdź">
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						<!-- ATRYBUTY -->
+
+<!-- ATRYBUTY - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic03.png" alt="" /></a>
 								<div class="inner">
@@ -148,7 +234,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- UMIEJĘTNOŚCI -->
+
+<!-- UMIEJĘTNOŚCI  - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
 								<div class="inner">
@@ -179,7 +267,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- ATUTY -->
+
+<!-- ATUTY - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
 								<div class="inner">
@@ -210,7 +300,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- MOCE -->
+
+<!-- MOCE - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 								<div class="inner">
@@ -242,7 +334,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- EKWIPUNEK -->
+
+<!-- EKWIPUNEK - Seckja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 								<div class="inner">
@@ -274,7 +368,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- RUBRYKI NUMERYCZNE -->
+
+<!-- RUBRYKI NUMERYCZNE - Sekcja -->
+
 						<div class="box">
 							<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 							<div class="inner">
@@ -304,7 +400,9 @@
 									</div>
 							</div>
 						</div>
-						<!-- TŁO FABULARNE -->
+
+<!-- TŁO FABULARNE - Sekcja -->
+
 						<div class="box">
 							<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 							<div class="inner">
@@ -342,7 +440,8 @@
 					</div>
 				</div>
 
-			<!-- Footer -->
+<!-- Stopka strony -->
+
 				<footer id="footer">
 					<div class="inner">
 						<h2>Dziękuję za skorzystanie z naszych usług</h2>

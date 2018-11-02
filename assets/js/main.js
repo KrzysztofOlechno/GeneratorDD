@@ -1,8 +1,3 @@
-/*
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
 (function($) {
 
@@ -87,8 +82,8 @@
 		// Scrolly.
 			$('.scrolly').scrolly();
 
-		// Poptrox.
-			$window.on('load', function() {
+	
+			$window.on('load', function() {  	
 
 				var $thumbs = $('.thumbnails');
 
@@ -134,18 +129,15 @@ function myfunction()
 	var modal = document.getElementById(nazwa);
 	modal.style.display = "block";
 
-	var span = document.getElementById(nazwa);
+	var span = document.getElementById("Accept" + nazwa);
 	span.onclick = function() {
 	modal.style.display = "none";
 }
 
-	window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+	
 }
-console.log("po:", this.name);
-}
+
+
 
 // ikonki
 
@@ -158,3 +150,18 @@ for(var i=0;i<iconx.length;i++){
 
 function funkcjas()
 { this.href = "https://www.wp.pl/";}
+// wybór ras
+
+var RaceList = document.getElementsByClassName("race")
+for(var i=0;i<RaceList.length;i++){
+	 console.log(i," : ",RaceList[i].innerHTML)
+	 RaceList[i].addEventListener("click", DropDownUse)	
+}
+
+function DropDownUse(){
+	var DropDownRace1 = document.getElementById("dropik");
+	var DropDownRace2 = document.getElementById("Race");
+	var RacePick = this.innerHTML;
+	DropDownRace1.innerHTML = RacePick;
+	DropDownRace2.innerHTML = RacePick;
+}
