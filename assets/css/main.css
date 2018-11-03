@@ -1636,7 +1636,11 @@ background-color:rgba(37, 30, 48, 0.74);
 	
 }
 
-.dropdown-content div:hover {background-color: #ffffff; color: black;}
+.dropdown-content div:hover {
+	background-color: #ffffff;
+	color: black;
+	display: block;
+}
 						
 
 .dropdown:hover .dropdown-content {
@@ -1647,3 +1651,6 @@ background-color:rgba(37, 30, 48, 0.74);
     background-color: #3e8e41;
 }
 
+.hidden {
+	display: none;
+}

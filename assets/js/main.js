@@ -142,28 +142,44 @@ function PopupHid()
 
 // Ikony
 
-var iconx = document.getElementsByClassName("icon");
-console.log("tekst",iconx);
-for(var i=0;i<iconx.length;i++){
-	console.log(i," : ",iconx[i]);
-	iconx[i].addEventListener("click", funkcjas);
+var IconBtn = document.getElementsByClassName("icon");
+console.log("tekst", IconBtn);
+for(var i=0;i<IconBtn.length;i++){
+	console.log(i," : ",IconBtn[i]);
+	IconBtn[i].addEventListener("click", IconBtnFunct);
 }
 
-function funkcjas()
+function IconBtnFunct()
 { this.href = "https://www.wp.pl/";}
 
 // Wybór rasy
 
-var RaceList = document.getElementsByClassName("RaceChoose")
+var DrpdwnClck = document.getElementById("DropRaceDown");
+DrpdwnClck.addEventListener("click", ClassAdd);
+
+function ClassAdd(){
+	this.parentElement.children[1].classList.remove("hidden");
+	this.parentElement.children[1].classList.add("dropdown-content");
+}
+
+var RaceList = document.getElementsByClassName("RaceChoose");
 for(var i=0;i<RaceList.length;i++){
 	 console.log(i," : ",RaceList[i].innerHTML)
-	 RaceList[i].addEventListener("click", DropDownUse)	
+	 RaceList[i].addEventListener("click", DropDownUse);	
 }
 
 function DropDownUse(){
+	
 	var DropDownRace1 = document.getElementById("DropRaceDown");
 	var DropDownRace2 = document.getElementById("RaceName");
 	var RacePick = this.innerHTML;
 	DropDownRace1.innerHTML = RacePick;
 	DropDownRace2.innerHTML = RacePick;
+	this.parentElement.classList.add("hidden");
+	this.parentElement.classList.remove("dropdown-content");
+		
 }
+
+
+
+
