@@ -154,58 +154,71 @@ function IconBtnFunct()
 
 // Wybór rasy
 
-var DrpdwnClck = document.getElementById("DropRaceDown");
-DrpdwnClck.addEventListener("click", ClassAdd);
+var DrpdwnClck = document.getElementById("DropRaceDown");				// Wzięcie id przycisku
+DrpdwnClck.addEventListener("click", ClassAdd);							// Dodanie listnera
 
-function ClassAdd(){
+function ClassAdd(){													// Funkcja dodania widoczności poprzez nadanie klasy dla diva
 	this.parentElement.children[1].classList.remove("hidden");
 	this.parentElement.children[1].classList.add("dropdown-content");
 }
 
-var RaceList = document.getElementsByClassName("RaceChoose");
+var RaceList = document.getElementsByClassName("RaceChoose");			// Wyłapanie po klasie elementów dropdowna
 for(var i=0;i<RaceList.length;i++){
-	 console.log(i," : ",RaceList[i].innerHTML)
-	 RaceList[i].addEventListener("click", DropDownUse);	
+	 RaceList[i].addEventListener("click", DropDownUse);				// Dodanie listnera na każdym divie
 }
 
 function DropDownUse(){
 	
-	var DropDownRace1 = document.getElementById("DropRaceDown");
-	var DropDownRace2 = document.getElementById("RaceName");
-	var DropDownRace3 = document.getElementById("MainRace");
-	var RacePick = this.innerHTML;
-	DropDownRace1.innerHTML = RacePick;
-	DropDownRace2.innerHTML = RacePick;
-	DropDownRace3.value = RacePick;
-	this.parentElement.classList.add("hidden");
+	var DropDownRace1 = document.getElementById("DropRaceDown");		// Przycisk
+	var DropDownRace2 = document.getElementById("RaceName");			// Tytuł
+	var DropDownRace3 = document.getElementById("MainRace");			// Na głównej
+	var RacePick = this.innerHTML;										// Chwycenie wartości z diva
+	DropDownRace1.innerHTML = RacePick;									// Przypisanie
+	DropDownRace2.innerHTML = RacePick;									// Przypisanie
+	DropDownRace3.value = RacePick;										// Przypisanie
+	this.parentElement.classList.add("hidden");							// Usunięcie widoczności poprzez zabranie klasy
 	this.parentElement.classList.remove("dropdown-content");
-	RaceDescSet(RacePick);
-		
+	RaceDescSet(RacePick);												// Wywołanie funkcji do tworzenia opisów na bazie wartości z diva
 }
 
 function RaceDescSet(RacePickFunct){
-	var RaceDesc = document.getElementById("RaceDesc");
+	var RaceDesc = document.getElementById("RaceDesc");					// Wyłapanie miejsc na wrzucenie danych
 	var RaceStat = document.getElementById("RaceStats");
 	var RaceOther = document.getElementById("RaceOtherStats");
 	var RacePic = document.getElementById("RacePic");
 
-	if(RacePickFunct == 'Człowiek'){
+// Ustawienie podrasy w zależności od rasy 
+
+	var RaceExt = document.getElementById("RaceExt");					// Chwycenie id na dropdowna
+	var HumanArr = ["Jeden", "Dwa", "Trzy"];							// Daklarowanie tablic podras
+	var DwarfArr = ["Dwar1", "Dwar2", "Dwar3", "Dwar4", "Dwar5"];
+	var GnomeArr = ["Gnome1", "Gnome2"];
+
+	
+
+	if(RacePickFunct == 'Człowiek'){									// W zależności od wartości z przyciska dobiera pakiet danych do załadowania
 		RaceDesc.innerHTML = "Opis Człowiek";
 		RaceStat.innerHTML = "Staty Człowiek";
 		RaceOther.innerHTML = "Inne Człowiek";
 		RacePic.src = "images/Human.jpg";
+		RaceExtSet(HumanArr, RaceExt);						// Funkcja dodawania listy w postaci div na podstawie tablicy
+		
 	}
 	else if(RacePickFunct == 'Krasnolud'){
 		RaceDesc.innerHTML = "Opis Krasnolud";
 		RaceStat.innerHTML = "Staty Krasnolud";
 		RaceOther.innerHTML = "Inne Krasnolud";
 		RacePic.src = "images/Dwarf.jpg";
+		RaceExt.innerHTML = RaceExtSet(DwarfArr);
+		RaceExt.innerHTML = RaceExtSet(DwarfArr);
 	}
 	else if(RacePickFunct == 'Gnom'){
 		RaceDesc.innerHTML = "Opis Gnom";
 		RaceStat.innerHTML = "Staty Gnom";
 		RaceOther.innerHTML = "Inne Gnom";
 		RacePic.src = "images/Gnome.jpg";
+		RaceExt.innerHTML = RaceExtSet(GnomeArr);
+		RaceExt.innerHTML = RaceExtSet(GnomeArr);
 	}
 	else if(RacePickFunct == 'Ork'){
 		RaceDesc.innerHTML = "Opis Ork";
@@ -257,7 +270,40 @@ function RaceDescSet(RacePickFunct){
 	}
 }
 
+function RaceExtSet(RaceMainBranch, testowy){
+	var RaceInnerTxt = '';
+	for(var i=0;i<RaceMainBranch.length;i++){
+		RaceInnerTxt += '<div class="RaceChooseExt">' + RaceMainBranch[i] + '</div>';
+	}
+	testowy.innerHTML = RaceInnerTxt;
+	var RaceListExt = document.getElementsByClassName("RaceChooseExt");
+	console.log(RaceListExt[0], RaceListExt[1], RaceListExt[2],RaceListExt.length);
+	for(var i=0;i<RaceListExt.length;i++){
+	RaceListExt[0].addEventListener("click", function()
+	{
+		var DropDownExtRace1 = document.getElementById("DropRaceDownExt");
+		var DropDownExtRace2 = document.getElementById("RaceName");
+		var DropDownExtRace3 = document.getElementById("MainRace");
+		var RacePickExt = this.innerHTML;
+		console.log("xxxxxxxxxxxxxxxxxxxxxxxx");
+		DropDownExtRace1.innerHTML = RacePickExt;
+		DropDownExtRace2.innerHTML = RacePickExt;
+		DropDownExtRace3.value = RacePickExt;
+		this.parentElement.classList.add("hidden");
+		this.parentElement.classList.remove("dropdown-content");
+	});
+	
+	}
+   
+}
+
+
+
+
+
+
 
 			
-																	  	
-																	  	
+															  	
+										  	
+
