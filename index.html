@@ -46,7 +46,7 @@
 							<p>Wybór rasy w znaczący sposób wpływa na cechy postaci.</p>
 							<input type="button" class="button style1 fit Popup" name="Race" value="Wybierz">
 								<div class="tooltip">
-									<input type="text" class="button fit" value="Rasa" readonly>
+									<input id="MainRace" type="text" class="button fit" value="Rasa" readonly>
 									<span class="tooltiptext">Opis klasy</span>
 								
 <!-- Rasa - Pop-up -->
@@ -66,12 +66,29 @@
 												<div class="modal-body">
 													<table style="width:100%">
 														<tr>
-															<td style="width:30%">
+															<td style="width:15%">
 
 <!-- Rasa - Pop-up - Dropdown -->
 
 																<div class="dropdown">
 																	<button class="dropbtn" id="DropRaceDown" >Wybierz rasę</button>
+																	<div class="dropdown-content">
+																	  	<div class="RaceChoose">Człowiek</div>				
+																	  	<div class="RaceChoose">Krasnolud</div>		
+																	  	<div class="RaceChoose">Gnom</div>			
+																	  	<div class="RaceChoose">Ork</div>			
+																	  	<div class="RaceChoose">Niziołek</div>	
+																	  	<div class="RaceChoose">Planokrwisty</div>
+																	  	<div class="RaceChoose">Półelf</div>			
+																	  	<div class="RaceChoose">Półork</div>																  
+																	  	<div class="RaceChoose">Pomniejsze rasy</div>
+																	  	<div class="RaceChoose">Likantropy</div>		
+																	</div>
+																</div>
+															</td>
+															<td style="width:15%">
+																<div class="dropdown">
+																	<button class="dropbtn" id="DropRaceDownExt" >Szczegóły</button>
 																	<div class="dropdown-content">
 																	  	<div class="RaceChoose">Człowiek</div>				
 																	  	<div class="RaceChoose">Krasnolud</div>		
@@ -95,15 +112,15 @@
 
 <!-- Rasa - Pop-up - Obrazek -->
 
-															<td><img src="images/pic01.jpeg" style="width:100%" alt="" /></td>
+															<td colspan=2><img id="RacePic" src="images/Random.jpg" style="width:100%" alt="" /></td>
 
 <!-- Rasa - Pop-up - Opis -->
 
-															<td colspan=2>Opis</td>
+															<td id="RaceDesc" colspan=2>Opis</td>
 														</tr>
 														<tr>
-															<td >Statsy</td>
-															<td>Inne statsy</td>															
+															<td id="RaceStats">Statsy</td>
+															<td id="RaceOtherStats">Inne statsy</td>															
 														</tr>
 													</table>																										
 												</div>

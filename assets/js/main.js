@@ -172,14 +172,92 @@ function DropDownUse(){
 	
 	var DropDownRace1 = document.getElementById("DropRaceDown");
 	var DropDownRace2 = document.getElementById("RaceName");
+	var DropDownRace3 = document.getElementById("MainRace");
 	var RacePick = this.innerHTML;
 	DropDownRace1.innerHTML = RacePick;
 	DropDownRace2.innerHTML = RacePick;
+	DropDownRace3.value = RacePick;
 	this.parentElement.classList.add("hidden");
 	this.parentElement.classList.remove("dropdown-content");
+	RaceDescSet(RacePick);
 		
 }
 
+function RaceDescSet(RacePickFunct){
+	var RaceDesc = document.getElementById("RaceDesc");
+	var RaceStat = document.getElementById("RaceStats");
+	var RaceOther = document.getElementById("RaceOtherStats");
+	var RacePic = document.getElementById("RacePic");
+
+	if(RacePickFunct == 'Człowiek'){
+		RaceDesc.innerHTML = "Opis Człowiek";
+		RaceStat.innerHTML = "Staty Człowiek";
+		RaceOther.innerHTML = "Inne Człowiek";
+		RacePic.src = "images/Human.jpg";
+	}
+	else if(RacePickFunct == 'Krasnolud'){
+		RaceDesc.innerHTML = "Opis Krasnolud";
+		RaceStat.innerHTML = "Staty Krasnolud";
+		RaceOther.innerHTML = "Inne Krasnolud";
+		RacePic.src = "images/Dwarf.jpg";
+	}
+	else if(RacePickFunct == 'Gnom'){
+		RaceDesc.innerHTML = "Opis Gnom";
+		RaceStat.innerHTML = "Staty Gnom";
+		RaceOther.innerHTML = "Inne Gnom";
+		RacePic.src = "images/Gnome.jpg";
+	}
+	else if(RacePickFunct == 'Ork'){
+		RaceDesc.innerHTML = "Opis Ork";
+		RaceStat.innerHTML = "Staty Ork";
+		RaceOther.innerHTML = "Inne Ork";
+		RacePic.src = "images/Orc.jpg";
+	}
+	else if(RacePickFunct == 'Niziołek'){
+		RaceDesc.innerHTML = "Opis Niziołek";
+		RaceStat.innerHTML = "Staty Niziołek";
+		RaceOther.innerHTML = "Inne Niziołek";
+		RacePic.src = "images/Halfling.jpg";
+	}
+	else if(RacePickFunct == 'Planokrwisty'){
+		RaceDesc.innerHTML = "Opis Planokrwisty";
+		RaceStat.innerHTML = "Staty Planokrwisty";
+		RaceOther.innerHTML = "Inne Planokrwisty";
+		RacePic.src = "images/Planist.jpg";
+	}
+	else if(RacePickFunct == 'Półelf'){
+		RaceDesc.innerHTML = "Opis Półelf";
+		RaceStat.innerHTML = "Staty Półelf";
+		RaceOther.innerHTML = "Inne Półelf";
+		RacePic.src = "images/Halfelf.jpg";
+	}
+	else if(RacePickFunct == 'Półork'){
+		RaceDesc.innerHTML = "Opis Półork";
+		RaceStat.innerHTML = "Staty Półork";
+		RaceOther.innerHTML = "Inne Półork";
+		RacePic.src = "images/Halforc.jpg";
+	}
+	else if(RacePickFunct == 'Pomniejsze rasy'){
+		RaceDesc.innerHTML = "Opis Pomniejsze rasy";
+		RaceStat.innerHTML = "Staty innych ras";
+		RaceOther.innerHTML = "Inne innych";
+		RacePic.src = "images/Other.jpg";
+	}
+	else if(RacePickFunct == 'Likantropy'){
+		RaceDesc.innerHTML = "Opis Likantropy";
+		RaceStat.innerHTML = "Staty Likantropy";
+		RaceOther.innerHTML = "Inne Likantropy";
+		RacePic.src = "images/Licantrop.jpg";
+	}
+	else {
+		RareDesc.innerHTML == "Błąd opisu";
+		RaceStat.innerHTML = "Error";
+		RaceOther.innerHTML = "Error";
+		RacePic.src = "images/Random.jpg";
+	}
+}
 
 
-
+			
+																	  	
+																	  	
