@@ -169,6 +169,8 @@ for(var i=0;i<RaceList.length;i++){
 
 function DropDownUse(){
 	
+	var DropdownExtRaceBtn = document.getElementById("DropRaceDownExt");
+	DropdownExtRaceBtn.innerHTML = "Szczegóły";
 	var DropDownRace1 = document.getElementById("DropRaceDown");		// Przycisk
 	var DropDownRace2 = document.getElementById("RaceName");			// Tytuł
 	var DropDownRace3 = document.getElementById("MainRace");			// Na głównej
@@ -182,10 +184,7 @@ function DropDownUse(){
 }
 
 function RaceDescSet(RacePickFunct){
-	var RaceDesc = document.getElementById("RaceDesc");					// Wyłapanie miejsc na wrzucenie danych
-	var RaceStat = document.getElementById("RaceStats");
-	var RaceOther = document.getElementById("RaceOtherStats");
-	var RacePic = document.getElementById("RacePic");
+	
 
 // Ustawienie podrasy w zależności od rasy 
 
@@ -194,105 +193,92 @@ function RaceDescSet(RacePickFunct){
 	var DwarfArr = ["Dwar1", "Dwar2", "Dwar3", "Dwar4", "Dwar5"];
 	var GnomeArr = ["Gnome1", "Gnome2"];
 	var OrcArr = ["Orc1", "Orc2", "Orc3"];
-	var HalflingArr = ["Halfling1", "Halfling2","Halfling3"]
-
+	var HalflingArr = ["Halfling1", "Halfling2","Halfling3"];
+	var PlanistArr = ["Planist1"];
 	
+	var DescArr = [];
 
 	if(RacePickFunct == 'Człowiek'){									// W zależności od wartości z przyciska dobiera pakiet danych do załadowania
-		RaceDesc.innerHTML = "Opis Człowiek";
-		RaceStat.innerHTML = "Staty Człowiek";
-		RaceOther.innerHTML = "Inne Człowiek";
-		RacePic.src = "images/Human.jpg";
-		RaceExtSet(HumanArr, RaceExt);						// Funkcja dodawania listy w postaci div na podstawie tablicy
-		
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(HumanArr, RaceExt);									// Funkcja dodawania listy w postaci div na podstawie tablicy	
 	}
 	else if(RacePickFunct == 'Krasnolud'){
-		RaceDesc.innerHTML = "Opis Krasnolud";
-		RaceStat.innerHTML = "Staty Krasnolud";
-		RaceOther.innerHTML = "Inne Krasnolud";
-		RacePic.src = "images/Dwarf.jpg";
-		RaceExt.innerHTML = RaceExtSet(DwarfArr);
-		RaceExt.innerHTML = RaceExtSet(DwarfArr);
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(DwarfArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Gnom'){
-		RaceDesc.innerHTML = "Opis Gnom";
-		RaceStat.innerHTML = "Staty Gnom";
-		RaceOther.innerHTML = "Inne Gnom";
-		RacePic.src = "images/Gnome.jpg";
-		RaceExt.innerHTML = RaceExtSet(GnomeArr);
-		RaceExt.innerHTML = RaceExtSet(GnomeArr);
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(GnomeArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Ork'){
-		RaceDesc.innerHTML = "Opis Ork";
-		RaceStat.innerHTML = "Staty Ork";
-		RaceOther.innerHTML = "Inne Ork";
-		RacePic.src = "images/Orc.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(OrcArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Niziołek'){
-		RaceDesc.innerHTML = "Opis Niziołek";
-		RaceStat.innerHTML = "Staty Niziołek";
-		RaceOther.innerHTML = "Inne Niziołek";
-		RacePic.src = "images/Halfling.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(HalflingArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Planokrwisty'){
-		RaceDesc.innerHTML = "Opis Planokrwisty";
-		RaceStat.innerHTML = "Staty Planokrwisty";
-		RaceOther.innerHTML = "Inne Planokrwisty";
-		RacePic.src = "images/Planist.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(PlanistArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Półelf'){
-		RaceDesc.innerHTML = "Opis Półelf";
-		RaceStat.innerHTML = "Staty Półelf";
-		RaceOther.innerHTML = "Inne Półelf";
-		RacePic.src = "images/Halfelf.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(OrcArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Półork'){
-		RaceDesc.innerHTML = "Opis Półork";
-		RaceStat.innerHTML = "Staty Półork";
-		RaceOther.innerHTML = "Inne Półork";
-		RacePic.src = "images/Halforc.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(OrcArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Pomniejsze rasy'){
-		RaceDesc.innerHTML = "Opis Pomniejsze rasy";
-		RaceStat.innerHTML = "Staty innych ras";
-		RaceOther.innerHTML = "Inne innych";
-		RacePic.src = "images/Other.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(OrcArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Likantropy'){
-		RaceDesc.innerHTML = "Opis Likantropy";
-		RaceStat.innerHTML = "Staty Likantropy";
-		RaceOther.innerHTML = "Inne Likantropy";
-		RacePic.src = "images/Licantrop.jpg";
+		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(OrcArr, RaceExt);
 	}
 	else {
-		RareDesc.innerHTML == "Błąd opisu";
-		RaceStat.innerHTML = "Error";
-		RaceOther.innerHTML = "Error";
-		RacePic.src = "images/Random.jpg";
+		DescArr = ["ERROR","ERROR", "ERROR", "images/Random.jpg"];
+		SetAllFromRaceInPlace(DescArr);
 	}
 }
 
-function RaceExtSet(RaceMainBranch, testowy){
+function RaceExtSet(RaceMainBranch, RaceExtInt){
 	var RaceInnerTxt = '';
 	for(var i=0;i<RaceMainBranch.length;i++){
 		RaceInnerTxt += '<div class="RaceChooseExt">' + RaceMainBranch[i] + '</div>';
 	}
-	testowy.innerHTML = RaceInnerTxt;
+	RaceExtInt.innerHTML = RaceInnerTxt;
 	var RaceListExt = document.getElementsByClassName("RaceChooseExt");
-	console.log(RaceListExt[0], RaceListExt[1], RaceListExt[2],RaceListExt.length);
 	for(var i=0;i<RaceListExt.length;i++){
-	RaceListExt[0].addEventListener("click", function()
-	{
+	RaceListExt[i].addEventListener("click", function()
+	{ 	
+		var DrpdwnClckExt = document.getElementById("DropRaceDownExt");				// Wzięcie id przycisku
+		DrpdwnClckExt.addEventListener("click", ClassAdd);							// Dodanie listnera
+									
 		var DropDownExtRace1 = document.getElementById("DropRaceDownExt");
 		var DropDownExtRace2 = document.getElementById("RaceName");
 		var DropDownExtRace3 = document.getElementById("MainRace");
 		var RacePickExt = this.innerHTML;
-		console.log("xxxxxxxxxxxxxxxxxxxxxxxx");
+		
 		DropDownExtRace1.innerHTML = RacePickExt;
 		DropDownExtRace2.innerHTML = RacePickExt;
 		DropDownExtRace3.value = RacePickExt;
 		this.parentElement.classList.add("hidden");
 		this.parentElement.classList.remove("dropdown-content");
+
+		ExtRaceDesc(RacePickExt);
 	});
 	
 	}
@@ -300,10 +286,31 @@ function RaceExtSet(RaceMainBranch, testowy){
 }
 
 
+function SetAllFromRaceInPlace(DescR){
 
+	var RaceDesc = document.getElementById("RaceDesc");					// Wyłapanie miejsc na wrzucenie danych
+	var RaceStat = document.getElementById("RaceStats");
+	var RaceOther = document.getElementById("RaceOtherStats");
+	var RacePic = document.getElementById("RacePic");
 
+	RaceDesc.innerHTML = DescR[0];
+	RaceStat.innerHTML = DescR[1];
+	RaceOther.innerHTML = DescR[2];
+	RacePic.src = DescR[3];
+}
 
-
+function ExtRaceDesc(RacePickExtFunc)
+{	
+	var Arr1 = [5, 7, "Jeden"];
+	var Arr2 = [3, 2, "Dwa"];
+	var Arr3 = [7, 7, "Trzy"];
+	var AllRaceArr = [Arr1, Arr2, Arr3];
+	for(var i=0;RacePickExtFunc!=AllRaceArr[i][2];i++){
+		
+	}
+	
+	SetAllFromRaceInPlace(AllRaceArr[i]);
+}
 
 			
 															  	
