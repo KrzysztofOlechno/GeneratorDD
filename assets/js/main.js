@@ -193,6 +193,8 @@ function RaceDescSet(RacePickFunct){
 	var HumanArr = ["Jeden", "Dwa", "Trzy"];							// Daklarowanie tablic podras
 	var DwarfArr = ["Dwar1", "Dwar2", "Dwar3", "Dwar4", "Dwar5"];
 	var GnomeArr = ["Gnome1", "Gnome2"];
+	var OrcArr = ["Orc1", "Orc2", "Orc3"];
+	var HalflingArr = ["Halfling1", "Halfling2","Halfling3"]
 
 	
 
