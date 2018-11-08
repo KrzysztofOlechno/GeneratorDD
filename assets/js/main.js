@@ -189,7 +189,7 @@ function RaceDescSet(RacePickFunct){
 // Ustawienie podrasy w zależności od rasy 
 
 	var RaceExt = document.getElementById("RaceExt");					// Chwycenie id na dropdowna
-	var HumanArr = ["Jeden", "Dwa", "Trzy"];							// Daklarowanie tablic podras
+	var HumanArr = ["Calishyta", "Chondatanin", "Damaranin", "Illuskańczyk", "Mulanin", "Rashemita", "Tethyrczyk", "Bedyni", "Chultanie", "Durparczycy", "LLud", "Gurowie", "Halruaańczycy", "Imaskari", "Lantańczycy", "Maztikanie", "Narowie", "Netheryjczycy", "Raumiviranie", "Shaaryjczycy", "Shou", "Sossrimowie", "Talfirczycy", "Tashalczycy", "Tuiganie", "Turamici", "Uluici", "Vaasanie", "Zakharczycy"];							// Daklarowanie tablic podras
 	var DwarfArr = ["Dwar1", "Dwar2", "Dwar3", "Dwar4", "Dwar5"];
 	var GnomeArr = ["Gnome1", "Gnome2"];
 	var OrcArr = ["Orc1", "Orc2", "Orc3"];
