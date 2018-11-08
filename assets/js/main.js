@@ -189,19 +189,23 @@ function RaceDescSet(RacePickFunct){
 // Ustawienie podrasy w zależności od rasy 
 
 	var RaceExt = document.getElementById("RaceExt");					// Chwycenie id na dropdowna
-	var HumanArr = ["Calishyta", "Chondatanin", "Damaranin", "Illuskańczyk", "Mulanin", "Rashemita", "Tethyrczyk", "Bedyni", "Chultanie", "Durparczycy", "LLud", "Gurowie", "Halruaańczycy", "Imaskari", "Lantańczycy", "Maztikanie", "Narowie", "Netheryjczycy", "Raumiviranie", "Shaaryjczycy", "Shou", "Sossrimowie", "Talfirczycy", "Tashalczycy", "Tuiganie", "Turamici", "Uluici", "Vaasanie", "Zakharczycy"];							// Daklarowanie tablic podras
-	var DwarfArr = ["Dwar1", "Dwar2", "Dwar3", "Dwar4", "Dwar5"];
-	var GnomeArr = ["Gnome1", "Gnome2"];
-	var OrcArr = ["Orc1", "Orc2", "Orc3"];
-	var HalflingArr = ["Halfling1", "Halfling2","Halfling3"];
-	var PlanistArr = ["Planist1"];
+	var HumanArr = ["Calishyta", "Chondatanin", "Damaranin", "Illuskańczyk", "Mulanin", "Rashemita", "Tethyrczyk", "Bedyni", "Chultanie", "Durparczycy", "Llud", "Gurowie", "Halruaańczycy", "Imaskari", "Lantańczycy", "Maztikanie", "Narowie", "Netheryjczycy", "Raumiviranie", "Shaaryjczycy", "Shou", "Sossrimowie", "Talfirczycy", "Tashalczycy", "Tuiganie", "Turamici", "Uluici", "Vaasanie", "Zakharczycy"];							// Daklarowanie tablic podras
+	var DwarfArr = ["Arktyczny", "Dziki", "Szary", "Tarczowy", "Złoty", "Urdunnir"];
+	var GnomeArr = ["Leśny", "Podziemny", "Skalny"];
+	var OrcArr = ["Górski", "Szary", "Orog"];
+	var HalflingArr = ["Lekkostopy", "Waleczniak", "Zjawomyślny"];
+	var PlanistArr = ["Aasimar", "Diablę", "Fey'ri", "Genasi ogniowy", "Genasi powietrzny", "Genasi wodny", "Genasi ziemny", "Tanarukk"];
+	var HalfElfArr = ["Zwykły", "Wodny", "Drow"];
+	var HalfOrcArr = ["Półczłowiek", "Półkrasnolud", "Półgoblin", "Półhobgoblin", "Półniziołek", "Półgnom", "Półelf"];
+	var OtherRaceArr = ["Aarakokra", "Cantaur", "Goblinoidy", "Jaszczuroludź", "Kir-lanan", "Pomrok", "Wemik", "Yuan-ti"];
+	var LicantropArr = ["Nietoperzołak", "Niedźwiedziołak", "Dzikołak", "Kotołak", "Krokodylołak", "Szczurołak", "Rekinołak", "Tygrysołak", "Wilkołak", "Lythari"];
 	
 	var DescArr = [];
 
 	if(RacePickFunct == 'Człowiek'){									// W zależności od wartości z przyciska dobiera pakiet danych do załadowania
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(HumanArr, RaceExt);									// Funkcja dodawania listy w postaci div na podstawie tablicy	
+		RaceExtSet(HumanArr, RaceExt, RacePickFunct);							// Funkcja dodawania listy w postaci div na podstawie tablicy	
 	}
 	else if(RacePickFunct == 'Krasnolud'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
@@ -231,22 +235,22 @@ function RaceDescSet(RacePickFunct){
 	else if(RacePickFunct == 'Półelf'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(OrcArr, RaceExt);
+		RaceExtSet(HalfElfArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Półork'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(OrcArr, RaceExt);
+		RaceExtSet(HalfOrcArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Pomniejsze rasy'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(OrcArr, RaceExt);
+		RaceExtSet(OtherRaceArr, RaceExt);
 	}
 	else if(RacePickFunct == 'Likantropy'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(OrcArr, RaceExt);
+		RaceExtSet(LicantropArr, RaceExt);
 	}
 	else {
 		DescArr = ["ERROR","ERROR", "ERROR", "images/Random.jpg"];
@@ -254,7 +258,7 @@ function RaceDescSet(RacePickFunct){
 	}
 }
 
-function RaceExtSet(RaceMainBranch, RaceExtInt){
+function RaceExtSet(RaceMainBranch, RaceExtInt, RaceHold){
 	var RaceInnerTxt = '';
 	for(var i=0;i<RaceMainBranch.length;i++){
 		RaceInnerTxt += '<div class="RaceChooseExt">' + RaceMainBranch[i] + '</div>';
@@ -278,7 +282,8 @@ function RaceExtSet(RaceMainBranch, RaceExtInt){
 		this.parentElement.classList.add("hidden");
 		this.parentElement.classList.remove("dropdown-content");
 
-		ExtRaceDesc(RacePickExt);
+		ExtRaceDesc(RacePickExt, RaceHold);
+		
 	});
 	
 	}
@@ -296,16 +301,20 @@ function SetAllFromRaceInPlace(DescR){
 	RaceDesc.innerHTML = DescR[0];
 	RaceStat.innerHTML = DescR[1];
 	RaceOther.innerHTML = DescR[2];
-	RacePic.src = DescR[3];
+	//RacePic.src = DescR[3];
 }
 
-function ExtRaceDesc(RacePickExtFunc)
+function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc)
 {	
-	var Arr1 = [5, 7, "Jeden"];
+	var RaceComp = RaceMainHolderFunc + RacePickExtFunc;
+	console.log(RacePickExtFunc);
+	console.log(RaceMainHolderFunc);
+	console.log(RaceComp);
+	var Arr1 = [5, 7, "CzłowiekCalishyta"];
 	var Arr2 = [3, 2, "Dwa"];
 	var Arr3 = [7, 7, "Trzy"];
 	var AllRaceArr = [Arr1, Arr2, Arr3];
-	for(var i=0;RacePickExtFunc!=AllRaceArr[i][2];i++){
+	for(var i=0;RaceComp!=AllRaceArr[i][2];i++){
 		
 	}
 	
