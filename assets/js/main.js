@@ -330,16 +330,16 @@ function getRandomInt(min_roll, max_roll)
     return Math.floor(Math.random() * (max_roll - min_roll + 1)) + min_roll;
 }
 
-for(var i = 100 ; i > 0 ; i -= 1)
-{
-	sum_roll = 0;
-	for (number_of_roll = 3 ; number_of_roll > 0 ; number_of_roll -= 1) 
-	{ 
-	sum_roll += getRandomInt(min_roll,max_roll);
+var dowolna = document.getElementById("robocze");															  	
+console.log(dowolna);										  	
+dowolna.addEventListener("click",function(){
+	for(var i = 100 ; i > 0 ; i -= 1)
+	{
+		sum_roll = 0;
+		for (number_of_roll = 3 ; number_of_roll > 0 ; number_of_roll -= 1) 
+		{ 
+		sum_roll += getRandomInt(min_roll,max_roll);
+		}
+		console.log(sum_roll);
 	}
-	console.log(sum_roll);
-}
-
-															  	
-										  	
-
+});
