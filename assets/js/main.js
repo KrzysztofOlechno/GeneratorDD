@@ -313,6 +313,33 @@ function ExtRaceDesc(RacePickExtFunc)
 }
 
 			
-															  	
-										  	
+/*
+Funkcja, która będzie generować rzuty kostką plus do tego jednoczesne rzucanie 
+trzema kostkami dla cechy i sumowanie wyników z kostki.
+*/
 
+// rolling dices
+
+var min_roll = 1;
+var max_roll = 6;
+var number_of_roll = 3
+var sum_roll = 0
+
+function getRandomInt(min_roll, max_roll)
+{
+    return Math.floor(Math.random() * (max_roll - min_roll + 1)) + min_roll;
+}
+
+var dowolna = document.getElementById("robocze");															  	
+console.log(dowolna);										  	
+dowolna.addEventListener("click",function(){
+	for(var i = 100 ; i > 0 ; i -= 1)
+	{
+		sum_roll = 0;
+		for (number_of_roll = 3 ; number_of_roll > 0 ; number_of_roll -= 1) 
+		{ 
+		sum_roll += getRandomInt(min_roll,max_roll);
+		}
+		console.log(sum_roll);
+	}
+});
