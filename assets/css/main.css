@@ -1462,7 +1462,7 @@
 			}
 
 		}
-/*Tooltips*/
+/* Wyświetlanie tooltipów*/
 		.tooltip {
 			position: relative;
 			display: inline-block;
@@ -1510,7 +1510,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -1546,16 +1546,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
     to {top:0; opacity:1}
 }
 
-/* The Close Button */
-.close {
+/* Krzyżyk zamykania pop-up */
+.ClosePop {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.ClosePop:hover,
+.ClosePop:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -1576,11 +1576,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 
-#rasa .modal-header {
+#Race .modal-header {
 background-color:rgba(37, 30, 48, 0.74);
 }
 
-#rasa .modal-footer {
+#Race .modal-footer {
 	background-color:rgba(37, 30, 48, 0.74);
 	}
 
@@ -1624,19 +1624,23 @@ background-color:rgba(37, 30, 48, 0.74);
     display: none;
     background-color: #000000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	width: 27%;
+	width: 12.7%;
 	position: absolute;
 }
 
-.dropdown-content a {
-    color: black;
+.dropdown-content div {
+    color: rgb(255, 255, 255);
     text-decoration: none;
 	display: block;
-	padding: 16px;
+	
 	
 }
 
-.dropdown-content a:hover {background-color: #000000; color: black;}
+.dropdown-content div:hover {
+	background-color: #ffffff;
+	color: black;
+	display: block;
+}
 						
 
 .dropdown:hover .dropdown-content {
@@ -1647,3 +1651,6 @@ background-color:rgba(37, 30, 48, 0.74);
     background-color: #3e8e41;
 }
 
+.hidden {
+	display: none;
+}

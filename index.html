@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html>
+
+<!-- Sekcja nagłówkowa -->
+
 	<head>
 		<title>Dungeons and Dragons - Forgotten Realms</title>
 		<meta charset="utf-8" />
@@ -7,68 +10,185 @@
 		<link rel="shortcut icon" href="images/ddicon.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+
+<!-- Zawartość strony -->
+
 	<body id="top">
 
-			
-				<section id="banner">
-					<div class="inner">
-						<header>
-							<h1>Zaawansowany Generator Postaci do Dungeons and Dragons - Forgotten Realms</h1>
-							<p>Rozpocznij swoją przygodę, wkrocz do świata Zapomnianych krain jako wymarzona postać, <br />
-								którą nigdy nie będziesz w normalnym życiu, bo jest zwykłym nerdem i kliknij przycisk poniżej<br /></p>
-						</header>
-						<a href="#main" class="more"></a>
-					</div>
-				</section>
+<!-- Banner -->
 
-			<!-- Main -->
-				<div id="main">
-					<div class="inner">
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>Zaawansowany Generator Postaci do Dungeons and Dragons - Forgotten Realms</h1>
+					<p>Rozpocznij swoją przygodę, wkrocz do świata Zapomnianych krain jako wymarzona postać, <br />
+					   którą nigdy nie będziesz w normalnym życiu, bo jest zwykłym nerdem i kliknij przycisk poniżej<br /></p>
+				</header>
+					<a href="#main" class="more"></a>
+			</div>
+		</section>
 
-					<!-- Boxes -->
-						<div class="thumbnails">
-						<!-- RASA -->
-							<div class="box">
-								<a href="" class="image fit"><img src="images/pic01.jpeg" alt="" /></a>
-								<div class="inner">
-									<h3>Wybierz rasę</h3>
-									<p>Wybór rasy w znaczący sposób wpływa na cechy postaci.</p>
-									<input type="button" class="button style1 fit pop" name="rasa" value="Wybierz">
-									<div class="tooltip">
-										<input type="text" class="button fit" value="Rasa" readonly>
-										<span class="tooltiptext">Opis klasy</span>
+<!-- Główne menu -->
+
+		<div id="main">
+			<div class="inner">
+
+<!-- Pudełka -->
+
+				<div class="thumbnails">
+
+<!-- RASA - sekcja -->
+
+					<div class="box">
+						<a href="" class="image fit"><img src="images/pic01.jpeg" alt="" /></a>
+						<div class="inner">
+							<h3>Wybierz rasę</h3>
+							<p>Wybór rasy w znaczący sposób wpływa na cechy postaci.</p>
+							<input type="button" class="button style1 fit Popup" name="Race" value="Wybierz">
+								<div class="tooltip">
+									<input id="MainRace" type="text" class="button fit" value="Rasa" readonly>
+									<span class="tooltiptext">Opis klasy</span>
 								
-										<!-- Popsik rasa-->
-										<div id="rasa" class="modal">
-											<div class="modal-content">
-												<div class="modal-header">
-													<span class="close">&times;</span>
-													<h2>Rasa</h2>
+<!-- Rasa - Pop-up -->
+
+									<div id="Race" class="modal">
+										<div class="modal-content">
+
+<!-- Rasa - Pop-up - Nagłówek -->
+
+											<div class="modal-header">
+												<span id="ClosePopRace" class="ClosePop">&times;</span>
+												<h2>Rasa</h2>
+											</div>
+
+<!-- Rasa - Pop-up - Zawartość -->
+
+												<div class="modal-body">
+													<table style="width:100%">
+														<tr>
+															<td style="width:15%">
+
+<!-- Rasa - Pop-up - Dropdown -->
+
+																<div class="dropdown">
+																	<button class="dropbtn" id="DropRaceDown" >Wybierz rasę</button>
+																	<div class="dropdown-content">
+																	  	<div class="RaceChoose">Człowiek</div>				
+																	  	<div class="RaceChoose">Krasnolud</div>		
+																	  	<div class="RaceChoose">Gnom</div>			
+																	  	<div class="RaceChoose">Ork</div>			
+																	  	<div class="RaceChoose">Niziołek</div>	
+																	  	<div class="RaceChoose">Planokrwisty</div>
+																	  	<div class="RaceChoose">Półelf</div>			
+																	  	<div class="RaceChoose">Półork</div>																  
+																	  	<div class="RaceChoose">Pomniejsze rasy</div>
+																	  	<div class="RaceChoose">Likantropy</div>		
+																	</div>
+																</div>
+															</td>
+															<td style="width:15%">
+																<div class="dropdown">
+																	<button class="dropbtn" id="DropRaceDownExt" >Szczegóły</button>
+																	<div id="RaceExt" class="dropdown-content">		
+																	</div>
+																</div>
+															</td>
+
+<!-- Rasa - Pop-up - Nazwa -->
+
+															<td colspan=2 id="RaceName">RASA</td>
+														</tr>
+														<tr>
+
+<!-- Rasa - Pop-up - Obrazek -->
+
+															<td colspan=2><img id="RacePic" src="images/Random.jpg" style="width:100%" alt="" /></td>
+
+<!-- Rasa - Pop-up - Opis -->
+
+															<td id="RaceDesc" colspan=2>Opis</td>
+														</tr>
+														<tr>
+															<td colspan=2 id="RaceStats">Statsy</td>
+															<td id="RaceOtherStats">Inne statsy</td>															
+														</tr>
+													</table>																										
 												</div>
+
+<!-- Rasa - Pop-up - Stopka -->
+
+												<div class="modal-footer">
+													<input type="button" class="style1" name="AcceptRace" id="AcceptRace" value="Zatwierdź">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+<!-- KLASA - sekcja -->
+						
+							<div class="box">
+								<a href="" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Wybierz klasę</h3>
+									<p>Wybór klasy w znaczący sposób wpływa na cechy postaci.</p>
+									<input type="button" class="button style2 fit Popup" name="klasa" value="Wybierz">
+									<div class="tooltip">
+										<input type="text" class="button fit" value="Klasa"  readonly>
+										<span class="tooltiptext">Opis rasy</span>
+								
+<!-- Klasa - Pop-up -->
+
+										<div id="klasa" class="modal">
+											<div class="modal-content">
+
+<!-- Klasa - Pop-up - Nagłówek -->
+
+												<div class="modal-header">
+													<span class="ClosePop">&times;</span>
+													<h2>Klasa</h2>
+												</div>
+
+<!-- Klasa - Pop-up - Zawartość -->
+
 												<div class="modal-body">
 													<table style="width:100%">
 														<tr>
 															<td style="width:30%">
+																
+<!-- Klasa - Pop-up - Dropdown -->																
+																
 																<div class="dropdown">
-																	<button class="dropbtn">Dropdown</button>
+																	<button class="dropbtn">Wybierz klasę</button>
 																	<div class="dropdown-content">
-																	  Człowiek<br>				
-																	  Krasnolud<br>		
-																	  Gnom<br>			
-																	  Ork<br>			
-																	  Niziołek<br>	
-																	  Planokrwisty<br>	
-																	  Półelf<br>			
-																	  Półork<br>																  
-																	  Pomniejsze rasy<br>
-																	  Likantropy		
+																	  	<div>Barbarzyńca</div>			
+																	  	<div>Bard</div>
+																	  	<div>Czarodziej</div>			
+																	  	<div>Druid</div>		
+																	  	<div>Kapłan</div>
+																	  	<div>Łotrzyk</div>
+																	  	<div>Mnich</div>		
+																	  	<div>Paladyn</div>															  
+																	  	<div>Tropiciel</div>
+																	  	<div>Wojownik</div>
+																	  	<div>Zaklinacz</div>		
 																	</div>
-																  </div>
+																</div>
 															</td>
-															<td colspan=2>RASA</td>
+
+<!-- Klasa - Pop-up - Nazwa -->
+
+															<td colspan=2>KLASA</td>
 														</tr>
 														<tr>
-															<td><img src="images/pic01.jpeg" style="width:100%" alt="" /></td>
+
+<!-- Klasa - Pop-up - Obrazek -->
+
+															<td><img src="images/warrior.jpg" style="width:100%" alt="" /></td>
+															
+<!-- Klasa - Pop-up - Opis -->
+															
 															<td colspan=2>Opis</td>
 														</tr>
 														<tr>
@@ -78,53 +198,26 @@
 														</tr>
 													</table>	
 													
-												
+<!-- Klasa - Pop-up - Stopka -->												
+
 												</div>
 												<div class="modal-footer">
-													<input type="button" class="style1" name="" value="Zatwierdź">
+													<input type="button" class="style1" name="" id="Acceptklasa" value="Zatwierdź">
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						<!-- KLASA -->
-							<div class="box">
-								<a href="" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<div class="inner">
-									<h3>Wybierz klasę</h3>
-									<p>Wybór klasy w znaczący sposób wpływa na cechy postaci.</p>
-									<input type="button" class="button style2 fit pop" name="klasa" value="Wybierz">
-									<div class="tooltip">
-										<input type="text" class="button fit" value="Klasa"  readonly>
-										<span class="tooltiptext">Opis rasy</span>
-								
-										<!-- Popsik klasa-->
-										<div id="klasa" class="modal">
-											<div class="modal-content">
-												<div class="modal-header">
-													<span class="close">&times;</span>
-													<h2>Klasa</h2>
-												</div>
-												<div class="modal-body">
-													<p>Some text in the Modal Body</p>
-													<p>Some other text...</p>
-												</div>
-												<div class="modal-footer">
-													<h3>Zatwierdź</h3>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						<!-- ATRYBUTY -->
+
+<!-- ATRYBUTY - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic03.png" alt="" /></a>
 								<div class="inner">
 									<h3>Atrybuty</h3>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style3 fit pop" name="atryb" value="Wybierz">
+									<input type="button" class="button style3 fit Popup" name="atryb" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Atrybuty" readonly>
 										<span class="tooltiptext">Atrybuty</span>
@@ -133,7 +226,7 @@
 										<div id="atryb" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Atrybuty</h2>
 												</div>
 												<div class="modal-body">
@@ -148,14 +241,16 @@
 									</div>
 								</div>
 							</div>
-						<!-- UMIEJĘTNOŚCI -->
+
+<!-- UMIEJĘTNOŚCI  - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Umiejętności</h3>
 									<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" name="umie" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" name="umie" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -164,7 +259,7 @@
 										<div id="umie" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -179,14 +274,16 @@
 									</div>
 								</div>
 							</div>
-						<!-- ATUTY -->
+
+<!-- ATUTY - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Atuty</h3>
 									<p>Wybór atutów w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" name="atuty" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" name="atuty" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Atuty</span>
@@ -195,7 +292,7 @@
 										<div id="atuty" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -210,7 +307,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- MOCE -->
+
+<!-- MOCE - Sekcja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 								<div class="inner">
@@ -218,7 +317,7 @@
 									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 									<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -227,7 +326,7 @@
 										<div id="myModal" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -242,7 +341,9 @@
 									</div>
 								</div>
 							</div>
-						<!-- EKWIPUNEK -->
+
+<!-- EKWIPUNEK - Seckja -->
+
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 								<div class="inner">
@@ -250,7 +351,7 @@
 									<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 									<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -259,7 +360,7 @@
 										<div id="myModal" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -274,13 +375,15 @@
 									</div>
 								</div>
 							</div>
-						<!-- RUBRYKI NUMERYCZNE -->
+
+<!-- RUBRYKI NUMERYCZNE - Sekcja -->
+
 						<div class="box">
 							<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 							<div class="inner">
 								<h3>Nascetur nunc varius commodo</h3>
 								<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -289,7 +392,7 @@
 										<div id="myModal" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>Umiejętności</h2>
 												</div>
 												<div class="modal-body">
@@ -304,7 +407,9 @@
 									</div>
 							</div>
 						</div>
-						<!-- TŁO FABULARNE -->
+
+<!-- TŁO FABULARNE - Sekcja -->
+
 						<div class="box">
 							<a href="" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
 							<div class="inner">
@@ -312,7 +417,7 @@
 								<p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
 								<p>Wybór umiejętności w znaczący sposób wpływa na cechy postaci.</p>
 									<p>Wygeneruj wartości atrybutów. Będę miały wpływ na rzuty.</p>
-									<input type="button" class="button style4 fit pop" value="Wybierz">
+									<input type="button" class="button style4 fit Popup" value="Wybierz">
 									<div class="tooltip">
 										<input type="text" class="button fit" value="Umiejętności" readonly>
 										<span class="tooltiptext">Umiejętności</span>
@@ -321,7 +426,7 @@
 										<div id="myModal5" class="modal">
 											<div class="modal-content">
 												<div class="modal-header">
-													<span class="close">&times;</span>
+													<span class="ClosePop">&times;</span>
 													<h2>5555</h2>
 												</div>
 												<div class="modal-body">
@@ -342,7 +447,8 @@
 					</div>
 				</div>
 
-			<!-- Footer -->
+<!-- Stopka strony -->
+
 				<footer id="footer">
 					<div class="inner">
 						<h2>Dziękuję za skorzystanie z naszych usług</h2>
