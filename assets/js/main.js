@@ -210,51 +210,50 @@ function RaceDescSet(RacePickFunct){
 	else if(RacePickFunct == 'Krasnolud'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(DwarfArr, RaceExt);
+		RaceExtSet(DwarfArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Gnom'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(GnomeArr, RaceExt);
+		RaceExtSet(GnomeArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Ork'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(OrcArr, RaceExt);
+		RaceExtSet(OrcArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Niziołek'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(HalflingArr, RaceExt);
+		RaceExtSet(HalflingArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Planokrwisty'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(PlanistArr, RaceExt);
+		RaceExtSet(PlanistArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Półelf'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(HalfElfArr, RaceExt);
+		RaceExtSet(HalfElfArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Półork'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(HalfOrcArr, RaceExt);
+		RaceExtSet(HalfOrcArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Pomniejsze rasy'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(OtherRaceArr, RaceExt);
+		RaceExtSet(OtherRaceArr, RaceExt, RacePickFunct);
 	}
-	else if(RacePickFunct == 'Likantropy'){
+	else if(RacePickFunct == 'Likantrop'){
 		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
-		RaceExtSet(LicantropArr, RaceExt);
+		RaceExtSet(LicantropArr, RaceExt, RacePickFunct);
 	}
 	else {
 		DescArr = ["ERROR","ERROR", "ERROR", "images/Random.jpg"];
-		SetAllFromRaceInPlace(DescArr);
 	}
 }
 
@@ -281,8 +280,9 @@ function RaceExtSet(RaceMainBranch, RaceExtInt, RaceHold){
 		DropDownExtRace3.value = RacePickExt;
 		this.parentElement.classList.add("hidden");
 		this.parentElement.classList.remove("dropdown-content");
-
+		console.log(RaceHold);
 		ExtRaceDesc(RacePickExt, RaceHold);
+		
 		
 	});
 	
@@ -300,8 +300,8 @@ function SetAllFromRaceInPlace(DescR){
 
 	RaceDesc.innerHTML = DescR[0];
 	RaceStat.innerHTML = DescR[1];
-	RaceOther.innerHTML = DescR[2];
-	//RacePic.src = DescR[3];
+	RaceOther.innerHTML = DescR[3];
+	RacePic.src = DescR[3];
 }
 
 function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc)
@@ -310,14 +310,91 @@ function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc)
 	console.log(RacePickExtFunc);
 	console.log(RaceMainHolderFunc);
 	console.log(RaceComp);
-	var Arr1 = [5, 7, "CzłowiekCalishyta"];
-	var Arr2 = [3, 2, "Dwa"];
-	var Arr3 = [7, 7, "Trzy"];
-	var AllRaceArr = [Arr1, Arr2, Arr3];
-	for(var i=0;RaceComp!=AllRaceArr[i][2];i++){
-		
+	var ArrRa1 = [1,2,3,"CzłowiekCalishyta"];
+    var ArrRa2 = [1,2,3,"CzłowiekChondatanin"];
+    var ArrRa3 = [1,2,3,"CzłowiekDamaranin"];
+    var ArrRa4 = [1,2,3,"CzłowiekIlluskańczyk"];
+    var ArrRa5 = [1,2,3,"CzłowiekMulanin"];
+    var ArrRa6 = [1,2,3,"CzłowiekRashemita"];
+    var ArrRa7 = [1,2,3,"CzłowiekTethyrczyk"];
+    var ArrRa8 = [1,2,3,"CzłowiekBedyni"];
+    var ArrRa9 = [1,2,3,"CzłowiekChultanie"];
+    var ArrRa10 = [1,2,3,"CzłowiekDurparczycy"];
+    var ArrRa11 = [1,2,3,"CzłowiekLlud"];
+    var ArrRa12 = [1,2,3,"CzłowiekGurowie"];
+    var ArrRa13 = [1,2,3,"CzłowiekHalruaańczycy"];
+    var ArrRa14 = [1,2,3,"CzłowiekImaskari"];
+    var ArrRa15 = [1,2,3,"CzłowiekLantańczycy"];
+    var ArrRa16 = [1,2,3,"CzłowiekMaztikanie"];
+    var ArrRa17 = [1,2,3,"CzłowiekNarowie"];
+    var ArrRa18 = [1,2,3,"CzłowiekNetheryjczycy"];
+    var ArrRa19 = [1,2,3,"CzłowiekRaumiviranie"];
+    var ArrRa20 = [1,2,3,"CzłowiekShaaryjczycy"];
+    var ArrRa21 = [1,2,3,"CzłowiekShou"];
+    var ArrRa22 = [1,2,3,"CzłowiekSossrimowie"];
+    var ArrRa23 = [1,2,3,"CzłowiekTalfirczycy"];
+    var ArrRa24 = [1,2,3,"CzłowiekTashalczycy"];
+    var ArrRa25 = [1,2,3,"CzłowiekTuiganie"];
+    var ArrRa26 = [1,2,3,"CzłowiekTuramici"];
+    var ArrRa27 = [1,2,3,"CzłowiekUluici"];
+    var ArrRa28 = [1,2,3,"CzłowiekVaasanie"];
+    var ArrRa29 = [1,2,3,"CzłowiekZakharczycy"];
+    var ArrRa30 = [1,2,3,"KrasnoludArktyczny"];
+    var ArrRa31 = [1,2,3,"KrasnoludDziki"];
+    var ArrRa32 = [1,2,3,"KrasnoludSzary"];
+    var ArrRa33 = [1,2,3,"KrasnoludTarczowy"];
+    var ArrRa34 = [1,2,3,"KrasnoludZłoty"];
+    var ArrRa35 = [1,2,3,"KrasnoludUrdunnir"];
+    var ArrRa36 = [1,2,3,"GnomLeśny"];
+    var ArrRa37 = [1,2,3,"GnomPodziemny"];
+    var ArrRa38 = [1,2,3,"GnomSkalny"];
+    var ArrRa39 = [1,2,3,"OrkGórski"];
+    var ArrRa40 = [1,2,3,"OrkSzary"];
+    var ArrRa41 = [1,2,3,"OrkOrog"];
+    var ArrRa42 = [1,2,3,"NiziołekLekkostopy"];
+    var ArrRa43 = [1,2,3,"NiziołekWaleczniak"];
+    var ArrRa44 = [1,2,3,"NiziołekZjawomyślny"];
+    var ArrRa45 = [1,2,3,"PlanokrwistyAasimar"];
+    var ArrRa46 = [1,2,3,"PlanokrwistyDiablę"];
+    var ArrRa47 = [1,2,3,"PlanokrwistyFey'ri"];
+    var ArrRa48 = [1,2,3,"PlanokrwistyGenasi ogniowy"];
+    var ArrRa49 = [1,2,3,"PlanokrwistyGenasi powietrzny"];
+    var ArrRa50 = [1,2,3,"PlanokrwistyGenasi wodny"];
+    var ArrRa51 = [1,2,3,"PlanokrwistyGenasi ziemny"];
+    var ArrRa52 = [1,2,3,"PlanokrwistyTanarukk"];
+    var ArrRa53 = [1,2,3,"PółelfZwykły"];
+    var ArrRa54 = [1,2,3,"PółelfWodny"];
+    var ArrRa55 = [1,2,3,"PółelfDrow"];
+    var ArrRa56 = [1,2,3,"PółorkPółczłowiek"];
+    var ArrRa57 = [1,2,3,"PółorkPółkrasnolud"];
+    var ArrRa58 = [1,2,3,"PółorkPółgoblin"];
+    var ArrRa59 = [1,2,3,"PółorkPółhobgoblin"];
+    var ArrRa60 = [1,2,3,"PółorkPółniziołek"];
+    var ArrRa61 = [1,2,3,"PółorkPółgnom"];
+    var ArrRa62 = [1,2,3,"PółorkPółelf"];
+    var ArrRa63 = [1,2,3,"Pomniejsze rasyAarakokra"];
+    var ArrRa64 = [1,2,3,"Pomniejsze rasyCantaur"];
+    var ArrRa65 = [1,2,3,"Pomniejsze rasyGoblinoidy"];
+    var ArrRa66 = [1,2,3,"Pomniejsze rasyJaszczuroludź"];
+    var ArrRa67 = [1,2,3,"Pomniejsze rasyKir-lanan"];
+    var ArrRa68 = [1,2,3,"Pomniejsze rasyPomrok"];
+    var ArrRa69 = [1,2,3,"Pomniejsze rasyWemik"];
+    var ArrRa70 = [1,2,3,"Pomniejsze rasyYuan-ti"];
+    var ArrRa71 = [1,2,3,"LikantropNietoperzołak"];
+    var ArrRa72 = [1,2,3,"LikantropNiedźwiedziołak"];
+    var ArrRa73 = [1,2,3,"LikantropDzikołak"];
+    var ArrRa74 = [1,2,3,"LikantropKotołak"];
+    var ArrRa75 = [1,2,3,"LikantropKrokodylołak"];
+    var ArrRa76 = [1,2,3,"LikantropSzczurołak"];
+    var ArrRa77 = [1,2,3,"LikantropRekinołak"];
+    var ArrRa78 = [1,2,3,"LikantropTygrysołak"];
+    var ArrRa79 = [1,2,3,"LikantropWilkołak"];
+    var ArrRa80 = [1,2,3,"LikantropLythari"];
+	var AllRaceArr = [ArrRa1,ArrRa2,ArrRa3 ,ArrRa4,ArrRa5,ArrRa6,ArrRa7,ArrRa8,ArrRa9,ArrRa10,ArrRa11,ArrRa12,ArrRa13,ArrRa14,ArrRa15,ArrRa16,ArrRa17,ArrRa18,ArrRa19,ArrRa20,ArrRa21,ArrRa22,ArrRa23,ArrRa24,ArrRa25,ArrRa26,ArrRa27,ArrRa28,ArrRa29,ArrRa30,ArrRa31,ArrRa32,ArrRa33,ArrRa34,ArrRa35,ArrRa36,ArrRa37,ArrRa38,ArrRa39,ArrRa40,ArrRa41,ArrRa42,ArrRa43,ArrRa44,ArrRa45,ArrRa46,ArrRa47,ArrRa48,ArrRa49,ArrRa50,ArrRa51,ArrRa52,ArrRa53,ArrRa54,ArrRa55,ArrRa56,ArrRa57,ArrRa58,ArrRa59,ArrRa60,ArrRa61,ArrRa62,ArrRa63,ArrRa64,ArrRa65,ArrRa66,ArrRa67,ArrRa68,ArrRa69,ArrRa70,ArrRa71,ArrRa72,ArrRa73,ArrRa74,ArrRa75,ArrRa76,ArrRa77,ArrRa78,ArrRa79,ArrRa80];
+	for(var i=0;RaceComp!=AllRaceArr[i][3];i++){
+		console.log("OK");
 	}
-	
+	console.log(AllRaceArr[i]);
 	SetAllFromRaceInPlace(AllRaceArr[i]);
 }
 
