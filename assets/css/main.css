@@ -1654,3 +1654,8 @@ background-color:rgba(37, 30, 48, 0.74);
 .hidden {
 	display: none;
 }
+
+.Description{
+	vertical-align: top;
+	text-align: justify;
+}
