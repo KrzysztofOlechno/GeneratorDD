@@ -190,6 +190,7 @@ function RaceDescSet(RacePickFunct){
 
 	var RaceExt = document.getElementById("RaceExt");					// Chwycenie id na dropdowna
 	var HumanArr = ["Calishyta", "Chondatanin", "Damaranin", "Illuskańczyk", "Mulanin", "Rashemita", "Tethyrczyk", "Bedyni", "Chultanie", "Durparczycy", "Llud", "Gurowie", "Halruaańczycy", "Imaskari", "Lantańczycy", "Maztikanie", "Narowie", "Netheryjczycy", "Raumiviranie", "Shaaryjczycy", "Shou", "Sossrimowie", "Talfirczycy", "Tashalczycy", "Tuiganie", "Turamici", "Uluici", "Vaasanie", "Zakharczycy"];							// Daklarowanie tablic podras
+	var ElfArr = ["Avariel", "Drow", "Dziki", "Księżycowy", "Leśny", "Słoneczny", "Wodny"];
 	var DwarfArr = ["Arktyczny", "Dziki", "Szary", "Tarczowy", "Złoty", "Urdunnir"];
 	var GnomeArr = ["Leśny", "Podziemny", "Skalny"];
 	var OrcArr = ["Górski", "Szary", "Orog"];
@@ -211,15 +212,26 @@ function RaceDescSet(RacePickFunct){
 		RaceExtSet(HumanArr, RaceExt, RacePickFunct, DescArr);							// Funkcja dodawania listy w postaci div na podstawie tablicy	
 	}
 	else if(RacePickFunct == 'Krasnolud'){
-		DescArr = ["Krzepki Lud, niewzruszony jak ziemia, z której go ukształtowano, w przeszłości władał ogromnymi imperiami, rozciągającymi się na i pod powierzchnią Faerunu. Minęły stulecia powolnego regresu i wiekszość krasnoludzkich królestw upadła, ale przetrwały owoce ich pracy, wciąż niedoścignione mimo upływu lat. Ostatnimi czasy Błogosławieństwo Grzmotu zainicłowało odrodzenie rasy, które być może przywróci Krzepkiemu Ludowi niegdysiejszą chwałę.",
+		DescArr = ["Krzepki Lud, niewzruszony jak ziemia, z której go ukształtowano, w przeszłości władał ogromnymi imperiami, rozciągającymi się nad i pod powierzchnią Faerunu. Minęły stulecia powolnego regresu i wiekszość krasnoludzkich królestw upadła, ale przetrwały owoce ich pracy, wciąż niedoścignione mimo upływu lat. Ostatnimi czasy Błogosławieństwo Grzmotu zainicłowało odrodzenie rasy, które być może przywróci Krzepkiemu Ludowi niegdysiejszą chwałę.",
 		"-",
 		"-",
 		"images/Dwarf/Dwarf.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(DwarfArr, RaceExt, RacePickFunct, DescArr);
 	}
+	else if(RacePickFunct == 'Elf'){
+		DescArr = ["Elfy mają za sobą długą historię, ale nie są rodowitymi mieszkańcami Faerunu. 25 000 lat temu przybyły z krainy Faerie, wykorzystując dawno już zaginione przejścia i bramy baśniowych istot. Mimo zróżnicowania elfiej rasy wszyscy jej przedstawiciele mają pewne cechy wspólne. Prawdopodobnie najsilniejszą z nich jest talent magiczny. Najwspanialsze przykłady magii tej rasy to <i>mythal<i/> - potężne pola magicznej energii.",
+		"-", 
+		"-", 
+		"images/Human.jpg"];
+		SetAllFromRaceInPlace(DescArr);
+		RaceExtSet(GnomeArr, RaceExt, RacePickFunct);
+	}
 	else if(RacePickFunct == 'Gnom'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ['Według gnomich legend, pierwsi przedstawiciele niniejszej rasy zrodzili się z klejnotów odkrytych przez Garla Świetlistozłotego, przywódcy gnomiego paneteonu. O Gnomach mówi się czasami "Zapomniany Lud", co stanowi nader trafne określenie. Mało który przedstawiciel tej rasy kiedykolwiek zaprzątał uwagę światowych potęg. Nawet same gnomy nie wiedzą o tym, co działo się z ich ludem w minionych wiekach. O ile im wiadomo od zawsze były w Faerunie i mieszkały w ukrytych, sekretnych miejscach.' ,
+		"-", 
+		"-", 
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(GnomeArr, RaceExt, RacePickFunct);
 	}
@@ -239,7 +251,10 @@ function RaceDescSet(RacePickFunct){
 		RaceExtSet(PlanistArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Półelf'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Półelfy nie mają raczej historii rasowej. Niezbyt liczne i rozporoszone po całym Faerunie, mało zaznaczają swoją obecność. Prawdziwe półelfie kultury powstały w bardzo niewielu czasach i miejscach. Jest to najliczniejsza z ras mieszanego pochodzenia. Występują w całym Faerunie, ale niewiele ziem mogą uznać za własne. Jest to rasa urodziwa i spokojnego charakteru. Jej przedstawiciele wyzwaniom mieszanego pochodzenia stawiają czoło z wdziękiem i spokojem.",
+		"-", 
+		"-", 
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(HalfElfArr, RaceExt, RacePickFunct);
 	}
@@ -249,12 +264,18 @@ function RaceDescSet(RacePickFunct){
 		RaceExtSet(HalfOrcArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Pomniejsze rasy'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Fearun zamieszkują rasy pomniejsze, rzadziej spotykane, ale tak czy inaczej trzeba się z nimi liczyć. Nie są to samotne potwory - każda z ras ma swoistą kulturę, przeważnie długą i zapisaną historię, bardzo znaczące tradycje i znaczą dumę.",
+		"-", 
+		"-", 
+		"-"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(OtherRaceArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Likantrop'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Wszystko wskazuje na to, że likantropy są plagą Faerunu od samych jego początków. Nie mają historii rasy jako takiej. Likantropy nie są rasą, lecz grupą osób cierpiących przez tę samą klątwę. Posiadają zdolność zmiany postaci w zwierzęcą lub hybrydy, a czasem przydarza to się wbrew ich woli. Każdy gatunek gigantów i humanoidów jest wrażliwy na likantropię. W postaci humanoida likantrop wygląda tak jak zwykle.",
+		"-", 
+		"-", 
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(LicantropArr, RaceExt, RacePickFunct);
 	}
@@ -316,11 +337,11 @@ function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc, DescArrFuncExt)
 	console.log(RacePickExtFunc);
 	console.log(RaceMainHolderFunc);
 	console.log(RaceComp);
-/* Calishyta */	var ArrRa1 = [1,2,3,"images/Human/Calishyta.jpg","CzłowiekCalishyta"];
+/* Calishyta */	var ArrRa1 = [1,2,"(Male) Aseir, Bardeid, Haseid, Khemed, Mehmen, Sudeiman, Zasheir; (female) Atala, Ceidil, Hama, Jasmal, Meilil, Seipora, Yasheira, Zasheida; (surnames) Basha, Dumein, Jassan, Khalid, Mostana, Pashar, Rein","images/Human/Calishyta.jpg","CzłowiekCalishyta"];
 /* Chondatanin */    var ArrRa2 = [1,2,3,"CzłowiekChondatanin"];
-/* */    var ArrRa3 = [1,2,3,"CzłowiekDamaranin"];
-/* */    var ArrRa4 = [1,2,3,"CzłowiekIlluskańczyk"];
-/* */    var ArrRa5 = [1,2,3,"CzłowiekMulanin"];
+/* Damaranin*/    var ArrRa3 = [1,2,3,"CzłowiekDamaranin"];
+/* Illuskańczyk*/    var ArrRa4 = [1,2,3,"CzłowiekIlluskańczyk"];
+/* Mulanin*/    var ArrRa5 = [1,2,3,"CzłowiekMulanin"];
 /* */    var ArrRa6 = [1,2,3,"CzłowiekRashemita"];
 /* */    var ArrRa7 = [1,2,3,"CzłowiekTethyrczyk"];
 /* */    var ArrRa8 = [1,2,3,"CzłowiekBedyni"];
@@ -398,6 +419,14 @@ function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc, DescArrFuncExt)
 /* */    var ArrRa78 = [1,2,3,"LikantropTygrysołak"];
 /* */    var ArrRa79 = [1,2,3,"LikantropWilkołak"];
 /* */    var ArrRa80 = [1,2,3,"LikantropLythari"];
+		var ArrRa81 = [1,2,3,"ElfAvariel"];
+		var ArrRa80 = [1,2,3,"ElfDrow"];
+		var ArrRa80 = [1,2,3,"ElfDziki"];
+		var ArrRa80 = [1,2,3,"ElfKsiężycowy"];
+		var ArrRa80 = [1,2,3,"ElfLeśny"];
+		var ArrRa80 = [1,2,3,"ElfSłoneczny"];
+		var ArrRa80 = [1,2,3,"ElfWodny"];
+
 	var AllRaceArr = [ArrRa1,ArrRa2,ArrRa3 ,ArrRa4,ArrRa5,ArrRa6,ArrRa7,ArrRa8,ArrRa9,ArrRa10,ArrRa11,ArrRa12,ArrRa13,ArrRa14,ArrRa15,ArrRa16,ArrRa17,ArrRa18,ArrRa19,ArrRa20,ArrRa21,ArrRa22,ArrRa23,ArrRa24,ArrRa25,ArrRa26,ArrRa27,ArrRa28,ArrRa29,ArrRa30,ArrRa31,ArrRa32,ArrRa33,ArrRa34,ArrRa35,ArrRa36,ArrRa37,ArrRa38,ArrRa39,ArrRa40,ArrRa41,ArrRa42,ArrRa43,ArrRa44,ArrRa45,ArrRa46,ArrRa47,ArrRa48,ArrRa49,ArrRa50,ArrRa51,ArrRa52,ArrRa53,ArrRa54,ArrRa55,ArrRa56,ArrRa57,ArrRa58,ArrRa59,ArrRa60,ArrRa61,ArrRa62,ArrRa63,ArrRa64,ArrRa65,ArrRa66,ArrRa67,ArrRa68,ArrRa69,ArrRa70,ArrRa71,ArrRa72,ArrRa73,ArrRa74,ArrRa75,ArrRa76,ArrRa77,ArrRa78,ArrRa79,ArrRa80];
 	for(var i=0;RaceComp!=AllRaceArr[i][4];i++){
 		console.log("OK");
