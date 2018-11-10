@@ -236,17 +236,26 @@ function RaceDescSet(RacePickFunct){
 		RaceExtSet(GnomeArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Ork'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Wszystkimi aspektami życia społeczości orków rządzi wojna. Jeśli aktywnie nie najeżdżają i nie atakują wrogów(którymi często są inne plemiona orków), to szkolą się w walce, budują i naprawiają broń oraz machiny oblężnicze i nie mogą się doczekać następnej bitwy. Orkowie nie są rodowitymi mieszkańcami Torilu. Pierwsza ich migracja do tego świata miała miejsce wiele tysięcy lat temu, poprzez portale zbudowane przez jedną z ras stwórców.",
+		"-",
+		"-",
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(OrcArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Niziołek'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Niziołki pojawiły się na Torilu krótko po przybyciu ras stwórców, mniej więcej w tym czasie co krasnoludy, elfy i giganci. Uważa się, że miejsce gdzie zjawiły się najpierw to okolice Shaar. Niziołki wpasowują się w społeczeństwa krasnoludów, gnomów, elfów i ludzi gdziekolwiek się da, często w ogóle nie zwracając na siebie uwagi sąsiadów. I taka sytuacja im odpowiada, mogą bowiem żyć po swojemu bez żadnych przeszkód.",
+		"Staty człowiekxx", 
+		"Inne człowiek", 
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(HalflingArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Planokrwisty'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Planokrwiści - po części śmiertelnicy, po części istoty zupełnie innego rodzaju - to samotnicy i indywidualiści, którym rzadko trafia się okazaj spotkania pobratymców. Pochodzenie poszczególnych odmian planokrwistych bywa bardzo różne, tak samo ich kształty. Dziecko przybysza i innej istoty jest półczartem, półniebianinem lub półżywiołakiem. Rasy planokrwistych nie mają wspólnej historii, ale ci tej samej odmiany i z tego samego regionu często posiadają wspólnego przodka lub pokrewieństwo.",
+		"-", 
+		"-", 
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(PlanistArr, RaceExt, RacePickFunct);
 	}
@@ -259,7 +268,10 @@ function RaceDescSet(RacePickFunct){
 		RaceExtSet(HalfElfArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Półork'){
-		DescArr = ["Opis człowiek","Staty człowiekxx", "Inne człowiek", "images/Human.jpg"];
+		DescArr = ["Półorkowie występują w Faerunie dość powszechnie i od bardzo dawna, ale nigdy nie zjednoczyli się i nie stworzyli własnej cywilizacji. Wyjątkowe jednostki wśród nich często zyskują wielką potęgę w wybranych dziedzinach i trafiają na katy kronik historycznych, ale w imieniu innego ludu lub są to pojedyczne przypadki niezwiązane z żadną konkretną cywilizacją. Fizjonomia i masywne cielska jawnie zdradzają wszystkim ich pochodzenie.",
+		"-", 
+		"-", 
+		"images/Human.jpg"];
 		SetAllFromRaceInPlace(DescArr);
 		RaceExtSet(HalfOrcArr, RaceExt, RacePickFunct);
 	}
@@ -272,7 +284,7 @@ function RaceDescSet(RacePickFunct){
 		RaceExtSet(OtherRaceArr, RaceExt, RacePickFunct);
 	}
 	else if(RacePickFunct == 'Likantrop'){
-		DescArr = ["Wszystko wskazuje na to, że likantropy są plagą Faerunu od samych jego początków. Nie mają historii rasy jako takiej. Likantropy nie są rasą, lecz grupą osób cierpiących przez tę samą klątwę. Posiadają zdolność zmiany postaci w zwierzęcą lub hybrydy, a czasem przydarza to się wbrew ich woli. Każdy gatunek gigantów i humanoidów jest wrażliwy na likantropię. W postaci humanoida likantrop wygląda tak jak zwykle.",
+		DescArr = ["Wszystko wskazuje na to, że likantropy są plagą Faerunu od samych jego początków. Nie mają historii rasy jako takiej Likantropy nie są rasą, lecz grupą osób cierpiących przez tę samą klątwę. Posiadają zdolność zmiany postaci w zwierzęcą lub hybrydy, a czasem przydarza to się wbrew ich woli. Każdy gatunek gigantów i humanoidów jest wrażliwy na likantropię. W postaci humanoida likantrop wygląda tak jak zwykle.",
 		"-", 
 		"-", 
 		"images/Human.jpg"];
