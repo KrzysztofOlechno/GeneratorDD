@@ -349,14 +349,32 @@ function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc, DescArrFuncExt)
 	console.log(RacePickExtFunc);
 	console.log(RaceMainHolderFunc);
 	console.log(RaceComp);
-/* Calishyta */	var ArrRa1 = [1,2,"(Male) Aseir, Bardeid, Haseid, Khemed, Mehmen, Sudeiman, Zasheir; (female) Atala, Ceidil, Hama, Jasmal, Meilil, Seipora, Yasheira, Zasheida; (surnames) Basha, Dumein, Jassan, Khalid, Mostana, Pashar, Rein","images/Human/Calishyta.jpg","CzłowiekCalishyta"];
-/* Chondatanin */    var ArrRa2 = [1,2,3,"CzłowiekChondatanin"];
-/* Damaranin*/    var ArrRa3 = [1,2,3,"CzłowiekDamaranin"];
-/* Illuskańczyk*/    var ArrRa4 = [1,2,3,"CzłowiekIlluskańczyk"];
-/* Mulanin*/    var ArrRa5 = [1,2,3,"CzłowiekMulanin"];
-/* */    var ArrRa6 = [1,2,3,"CzłowiekRashemita"];
-/* */    var ArrRa7 = [1,2,3,"CzłowiekTethyrczyk"];
-/* */    var ArrRa8 = [1,2,3,"CzłowiekBedyni"];
+/* Calishyta */	var ArrRa1 = ['Calishyci uważają się za prawowitych władców wszystkich krain na południe i zachód od Morza Spadających Gwiazd. Za spadkobierców dżinni, którzy władali ziemiami pomiędzy Górami Granicznymi, a Lśniącym Morzem. Są też niezwykle dumni z liczącej sobie tysiące lat nieprzerwanej linii calishyckich imperiów. Z wyjątkiem Mulan, których mają za równych sobie, Calishyci uważają się za naród lepszy od hord "brudnych barbarzyńców" żyjących poza granicami ich państwa. Magia od dawna przenika kulturę Calishytów, a więc czarodzieje i zaklinacze są wśród nich powszechnym zjawiskiem. Do tej drugiej grupy zaliczają się przede wszystkim osoby pochodzące od dżinni. Mnisi z Calimshanu poświęcają się niesieniu niższym klasom ulgi w cierpieniu. Calishytów do poszukiwania przygód na ogół popycha nadzieja zgromadzenia wielkiej fortuny, która pozwoli spocząć na laurach i żyć w gnuśnym luksusie.' ,
+				"<b>Atuty rasowe:</b> Calishycki mag żywiołów, Szkoła haremu, wiedza o dżinni",
+				"(M) Aseir, Bardeid, Haseid, Khemed, Mehmen, Sudeiman, Zasheir; (K) Atala, Ceidil, Hama, Jasmal, Meilil, Seipora, Yasheira, Zasheida; (N) Basha, Dumein, Jassan, Khalid, Mostana, Pashar, Rein",
+				"images/Human/Calishyta.jpg",
+				"CzłowiekCalishyta"];
+/* Chondatanin */    var ArrRa2 = ["Chondatanie to twardy lud, nie bojący się ryzyka, podróży oraz zasiedlania nowych krain. Nie ustają w wysiłkach polepszania bytu finansowego swego i swoich rodzin. Chondathska kultura dotarła do wielu odległych krain, więc jej przedstawiciele czują się dobrze w większości ludzkich społeczeństw. Wielu to handlarze tej czy innej branży, sprzedający za pieniądze swoje umiejętności lub owoce pracy. Chondatanie wywodzą swe pochodzenie od Dwunastu Miast Mieczy w prastarym Jhaamdath. Dzisiaj chondathska kultura i język dominuje w większości centralnego i zachodniego Faerunu. Chondatanie oceniają innych poprzez pryzmat bogactwa i wpływów osoby czy jej rodziny. Do poszukiwania przygód Chondatan ciągną dwie rzeczy. Jedni imają się broni i czarów, aby bronić tego, co dla nich najdroższe. Inni wybierają życie na gościńcu i kupieckie wyprawy, aby szukać bogactwa wśród nieznanego.",
+				"<b>Atuty rasowe:</b> Chondathski misjonarz, Odporność na zarazę, Przewodzenie karawanom",
+				"(M) Darvin, Dorn, Evendur, Gorstag, Grim, Helm, Malark, Morn, Randal, Stedd; (K) Arveene, Esvele, Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele; (N) Amblecrown, Buckman, Dundragon, Evenwood, Greycastle, Tallstag",
+				"images/Human/Chondathan.jpg",
+				"CzłowiekChondatanin"];
+/* Damaranin */    var ArrRa3 = [1,
+				"(M) Bor, Fodel, Glar, Grigor, Igan, Ivor, Kosef, Mival, Orel, Pavel, Sergor; (K) Alethra, Kara, Katernin, Mara, Natali, Olma, Tana, Zora; (N) Bersk, Chernin, Dotsk, Kulenov, Marsk, Nemetsk, Shemov, Starag",
+				2,
+				3,
+				"CzłowiekDamaranin"];
+/* Illuskańczyk */    var ArrRa4 = [1,
+				2,
+				3,
+				"CzłowiekIlluskańczyk"];
+/* Mulanin */    var ArrRa5 = [1,
+				2,
+				3,
+				"CzłowiekMulanin"];
+/* Rashemita */    var ArrRa6 = [1,2,3,"CzłowiekRashemita"];
+/* Tethyrczyk */    var ArrRa7 = [1,2,3,"CzłowiekTethyrczyk"];
+/* Bedyni */    var ArrRa8 = [1,2,3,"CzłowiekBedyni"];
 /* */    var ArrRa9 = [1,2,3,"CzłowiekChultanie"];
 /* */    var ArrRa10 = [1,2,3,"CzłowiekDurparczycy"];
 /* */    var ArrRa11 = [1,2,3,"CzłowiekLlud"];
@@ -378,9 +396,11 @@ function ExtRaceDesc(RacePickExtFunc, RaceMainHolderFunc, DescArrFuncExt)
 /* */    var ArrRa27 = [1,2,3,"CzłowiekUluici"];
 /* */    var ArrRa28 = [1,2,3,"CzłowiekVaasanie"];
 /* */    var ArrRa29 = [1,2,3,"CzłowiekZakharczycy"];
-/*Krasnolud Arktyczny */    
-		var ArrRa30 = ["<b>Regiony: </b>Damara, Północ, Vaasa, Wielki Lodowiec <br> <b>Ulubione klasy: </b>Tropiciel",
-			2,3,"images/Dwarf/ADwarf.jpg","KrasnoludArktyczny"];
+/*Krasnolud Arktyczny */    var ArrRa30 = ["<b>Regiony: </b>Damara, Północ, Vaasa, Wielki Lodowiec <br> <b>Ulubione klasy: </b>Tropiciel",
+				2,
+				3,
+				"images/Dwarf/ADwarf.jpg",
+				"KrasnoludArktyczny"];
 /* */    var ArrRa31 = [1,2,3,"KrasnoludDziki"];
 /* */    var ArrRa32 = [1,2,3,"KrasnoludSzary"];
 /* */    var ArrRa33 = [1,2,3,"KrasnoludTarczowy"];
